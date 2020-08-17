@@ -1,0 +1,1 @@
+mainly programming, it appears. let's hope a book won't be needed
