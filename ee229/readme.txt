@@ -1,1 +1,1 @@
-lets try going without a book
+class is going slightly too fast, fall back to book if needed
