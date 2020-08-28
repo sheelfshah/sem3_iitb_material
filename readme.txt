@@ -5,13 +5,10 @@ notes status:
 	ee325: 0
 	ds203: till week 1.5
 	hs101: till week 1.5
-	ma205: till week 1.5
-	ee759: till week 1
+	ma205: till week 2, tuts left
 
 pending assignments:
-	ee229
-	ma205
-	ee759
+	ee229 x2
 
 marks coverup:
 	ee204: 3 in quiz
@@ -21,5 +18,4 @@ marks coverup:
 	ds203: 0
 	hs101: 0
 	ma205: 0
-	ee759: 0
 	
