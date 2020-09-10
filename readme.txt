@@ -1,5 +1,5 @@
 notes status:
-	ee204: till week 3.6
+	ee204: till week 4
 	ee224: till week2.6
 	ee229: till week 3, tuts left, tb left
 	ee325: till week 3 in ds
