@@ -1,9 +1,9 @@
 notes status:
-	ee204: till week 4
+	ee204: till week 4.1
 	ee224: till week 4
 	ee229: till week 3, tuts left, tb left
-	ee325: till week 3 in ds
-	ds203: till week 3
+	ee325: till week 3.3 in ds
+	ds203: till week 3.8
 	hs101: till week 3
 	ma205: till week 4, tuts left
 
@@ -12,7 +12,7 @@ pending assignments:
 	ds203
 
 marks coverup:
-	ee204: 3 in quiz
+	ee204: 6 in quiz
 	ee224: 0
 	ee229: 4 in quiz
 	ee325: 0
