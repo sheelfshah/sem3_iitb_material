@@ -1,11 +1,11 @@
 notes status:
-	ee204: till week 4.1
+	ee204: till week 5
 	ee224: till week 4
-	ee229: till week 3, tuts left, tb left
-	ee325: till week 3.3 in ds
-	ds203: till week 3.8
-	hs101: till week 3
-	ma205: till week 4, tuts left
+	ee229: till week 3, tuts left
+	ee325: till week 4 in ds, but read slides
+	ds203: till week 5
+	hs101: till week 5
+	ma205: till week 4.5, tuts left
 
 pending assignments:
 	ee325
