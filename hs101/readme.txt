@@ -1,3 +1,3 @@
 rely on book
 
-mankiw chpt1 notes done
+till midsem notes in black book

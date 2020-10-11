@@ -1,1 +1,3 @@
-class is going slightly too fast, fall back to book if needed
+pay attention in class
+
+notes in brown book till midsem

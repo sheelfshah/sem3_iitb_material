@@ -1,15 +1,16 @@
 notes status:
-	ee204: till week 7
-	ee224: till week 7
-	ee229: till week 5, tuts left
-	ee325: till week 6 in ds, but read slides
-	ds203: till week 7
-	hs101: till week 8
-	ma205: till week 6, tuts left
+	all notes done till midsem
+	ee204: till 
+	ee224: till 
+	ee229: till 
+	ee325: till 
+	ds203: till 
+	hs101: till 
+	ma207: not started
+	ma205: done
 
 pending assignments:
-	ee325
-	ds203
+	ds203_ass6
 
 marks coverup:
 	ee204: 9 in quiz
@@ -18,5 +19,5 @@ marks coverup:
 	ee325: 0
 	ds203: 0
 	hs101: 6
-	ma205: 7
+	ma205: 19
 	
