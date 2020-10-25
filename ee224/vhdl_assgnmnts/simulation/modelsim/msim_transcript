@@ -1,0 +1,67 @@
+# Reading pref.tcl
+# do xor4_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying D:/drbha/quartus_main/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/xor4.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:07:11 on Oct 25,2020
+# vcom -reportprogress 300 -93 -work work D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/xor4.vhd 
+# -- Loading package STANDARD
+# -- Compiling entity xor4
+# -- Compiling architecture behaviour_xor4 of xor4
+# End time: 18:07:11 on Oct 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/MUX.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:07:11 on Oct 25,2020
+# vcom -reportprogress 300 -93 -work work D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/MUX.vhd 
+# -- Loading package STANDARD
+# -- Compiling entity MUX
+# -- Compiling entity NOT_gate
+# -- Compiling entity AND_gate
+# -- Compiling entity OR_gate
+# -- Compiling architecture arch0 of NOT_gate
+# -- Compiling architecture arch1 of AND_gate
+# -- Compiling architecture arch2 of OR_gate
+# -- Compiling architecture behaviour_mux of MUX
+# End time: 18:07:11 on Oct 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/TB2.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:07:11 on Oct 25,2020
+# vcom -reportprogress 300 -93 -work work D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/TB2.vhd 
+# -- Loading package STANDARD
+# -- Compiling entity TB2
+# -- Compiling architecture behaviour_TB2 of TB2
+# End time: 18:07:12 on Oct 25,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  TB2
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" TB2 
+# Start time: 18:07:12 on Oct 25,2020
+# Loading std.standard
+# Loading work.tb2(behaviour_tb2)
+# Loading work.mux(behaviour_mux)
+# Loading work.not_gate(arch0)
+# Loading work.and_gate(arch1)
+# Loading work.or_gate(arch2)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Break key hit
+# Simulation stop requested.
+# End time: 18:09:08 on Oct 25,2020, Elapsed time: 0:01:56
+# Errors: 0, Warnings: 0
