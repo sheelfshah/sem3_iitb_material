@@ -1,13 +1,13 @@
 notes status:
 	all notes done till midsem
-	week 3 started
-	ee204: till week 1.2
-	ee224: till week 2
-	ee229: till week 1
-	ee325: till week 0
-	ds203: till week 1
+	week 4 going on
+	ee204: till week 3
+	ee224: till week 3
+	ee229: till week 1.1
+	ee325: till week 1
+	ds203: till week 3
 	hs101: till week 0
-	ma207: till week 0.6
+	ma207: till week 3
 	ma205: done
 
 pending assignments:
