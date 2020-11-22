@@ -3,15 +3,16 @@ notes status:
 	last week on
 	ee204: till week 5
 	ee224: till week 5
-	ee229: till week 3
+	ee229: done
 	ee325: till week 4
 	ds203: till week 5
-	hs101: till week 5
+	hs101: done
 	ma207: till week 3
 	ma205: done
 
 pending assignments:
-	
+	ds203 x2
+	ee325
 
 grade exp:
 	ee204: ab/bb
