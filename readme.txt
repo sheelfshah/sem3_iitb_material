@@ -2,9 +2,9 @@ notes status:
 	all notes done till midsem
 	last week on
 	ee204: till week 5
-	ee224: till week 5
+	ee224: done
 	ee229: done
-	ee325: till week 4
+	ee325: done
 	ds203: till week 5
 	hs101: done
 	ma207: till week 3
