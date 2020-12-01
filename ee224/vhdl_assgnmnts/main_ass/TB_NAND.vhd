@@ -1,0 +1,40 @@
+--testbench entity for NAND
+
+entity TB_NAND is
+end TB_NAND;
+
+architecture behaviour_TB_nand of TB_NAND is
+	signal TB_nand0, TB_nand1: bit; --input vars
+	signal TB_nand_out: bit; --output var
+	
+	component XOR_gate is
+		port( I0, I1: in bit;
+			O: out bit);
+	end component;
+	
+	begin
+	nand_inst: XOR_gate --instance of nand
+	port map(I0=>TB_nand0, I1=>TB_nand1, O=>TB_nand_out);
+	
+	process --vary inputs
+	begin
+	
+	TB_nand0<='0';
+	TB_nand1<='0';
+	wait for 5 ns;
+	
+	TB_nand0<='0';
+	TB_nand1<='1';
+	wait for 5 ns;
+	
+	TB_nand0<='1';
+	TB_nand1<='0';
+	wait for 5 ns;
+	
+	TB_nand0<='1';
+	TB_nand1<='1';
+	wait for 5 ns;
+	
+	end process;
+	
+end behaviour_TB_nand;

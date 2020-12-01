@@ -1,0 +1,228 @@
+|xor4
+IN1 => MUX:m7.S
+IN2 => MUX:m5.S
+IN2 => MUX:m6.S
+IN3 => MUX:m3.S
+IN3 => MUX:m4.S
+IN4 => MUX:m1.S
+IN4 => MUX:m2.S
+OUT1 << MUX:m7.O
+
+
+|xor4|MUX:m1
+I0 => AND_gate:first_and.IN11
+I1 => AND_gate:second_and.IN11
+S => NOT_gate:s_bar.IN00
+S => AND_gate:second_and.IN10
+O <= OR_gate:final_or.OUT2
+
+
+|xor4|MUX:m1|NOT_gate:s_bar
+IN00 => OUT0.DATAIN
+OUT0 <= IN00.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|xor4|MUX:m1|AND_gate:first_and
+IN10 => OUT1.IN0
+IN11 => OUT1.IN1
+OUT1 <= OUT1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|xor4|MUX:m1|AND_gate:second_and
+IN10 => OUT1.IN0
+IN11 => OUT1.IN1
+OUT1 <= OUT1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|xor4|MUX:m1|OR_gate:final_or
+IN20 => OUT2.IN0
+IN21 => OUT2.IN1
+OUT2 <= OUT2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|xor4|MUX:m2
+I0 => AND_gate:first_and.IN11
+I1 => AND_gate:second_and.IN11
+S => NOT_gate:s_bar.IN00
+S => AND_gate:second_and.IN10
+O <= OR_gate:final_or.OUT2
+
+
+|xor4|MUX:m2|NOT_gate:s_bar
+IN00 => OUT0.DATAIN
+OUT0 <= IN00.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|xor4|MUX:m2|AND_gate:first_and
+IN10 => OUT1.IN0
+IN11 => OUT1.IN1
+OUT1 <= OUT1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|xor4|MUX:m2|AND_gate:second_and
+IN10 => OUT1.IN0
+IN11 => OUT1.IN1
+OUT1 <= OUT1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|xor4|MUX:m2|OR_gate:final_or
+IN20 => OUT2.IN0
+IN21 => OUT2.IN1
+OUT2 <= OUT2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|xor4|MUX:m3
+I0 => AND_gate:first_and.IN11
+I1 => AND_gate:second_and.IN11
+S => NOT_gate:s_bar.IN00
+S => AND_gate:second_and.IN10
+O <= OR_gate:final_or.OUT2
+
+
+|xor4|MUX:m3|NOT_gate:s_bar
+IN00 => OUT0.DATAIN
+OUT0 <= IN00.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|xor4|MUX:m3|AND_gate:first_and
+IN10 => OUT1.IN0
+IN11 => OUT1.IN1
+OUT1 <= OUT1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|xor4|MUX:m3|AND_gate:second_and
+IN10 => OUT1.IN0
+IN11 => OUT1.IN1
+OUT1 <= OUT1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|xor4|MUX:m3|OR_gate:final_or
+IN20 => OUT2.IN0
+IN21 => OUT2.IN1
+OUT2 <= OUT2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|xor4|MUX:m4
+I0 => AND_gate:first_and.IN11
+I1 => AND_gate:second_and.IN11
+S => NOT_gate:s_bar.IN00
+S => AND_gate:second_and.IN10
+O <= OR_gate:final_or.OUT2
+
+
+|xor4|MUX:m4|NOT_gate:s_bar
+IN00 => OUT0.DATAIN
+OUT0 <= IN00.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|xor4|MUX:m4|AND_gate:first_and
+IN10 => OUT1.IN0
+IN11 => OUT1.IN1
+OUT1 <= OUT1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|xor4|MUX:m4|AND_gate:second_and
+IN10 => OUT1.IN0
+IN11 => OUT1.IN1
+OUT1 <= OUT1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|xor4|MUX:m4|OR_gate:final_or
+IN20 => OUT2.IN0
+IN21 => OUT2.IN1
+OUT2 <= OUT2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|xor4|MUX:m5
+I0 => AND_gate:first_and.IN11
+I1 => AND_gate:second_and.IN11
+S => NOT_gate:s_bar.IN00
+S => AND_gate:second_and.IN10
+O <= OR_gate:final_or.OUT2
+
+
+|xor4|MUX:m5|NOT_gate:s_bar
+IN00 => OUT0.DATAIN
+OUT0 <= IN00.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|xor4|MUX:m5|AND_gate:first_and
+IN10 => OUT1.IN0
+IN11 => OUT1.IN1
+OUT1 <= OUT1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|xor4|MUX:m5|AND_gate:second_and
+IN10 => OUT1.IN0
+IN11 => OUT1.IN1
+OUT1 <= OUT1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|xor4|MUX:m5|OR_gate:final_or
+IN20 => OUT2.IN0
+IN21 => OUT2.IN1
+OUT2 <= OUT2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|xor4|MUX:m6
+I0 => AND_gate:first_and.IN11
+I1 => AND_gate:second_and.IN11
+S => NOT_gate:s_bar.IN00
+S => AND_gate:second_and.IN10
+O <= OR_gate:final_or.OUT2
+
+
+|xor4|MUX:m6|NOT_gate:s_bar
+IN00 => OUT0.DATAIN
+OUT0 <= IN00.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|xor4|MUX:m6|AND_gate:first_and
+IN10 => OUT1.IN0
+IN11 => OUT1.IN1
+OUT1 <= OUT1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|xor4|MUX:m6|AND_gate:second_and
+IN10 => OUT1.IN0
+IN11 => OUT1.IN1
+OUT1 <= OUT1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|xor4|MUX:m6|OR_gate:final_or
+IN20 => OUT2.IN0
+IN21 => OUT2.IN1
+OUT2 <= OUT2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|xor4|MUX:m7
+I0 => AND_gate:first_and.IN11
+I1 => AND_gate:second_and.IN11
+S => NOT_gate:s_bar.IN00
+S => AND_gate:second_and.IN10
+O <= OR_gate:final_or.OUT2
+
+
+|xor4|MUX:m7|NOT_gate:s_bar
+IN00 => OUT0.DATAIN
+OUT0 <= IN00.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|xor4|MUX:m7|AND_gate:first_and
+IN10 => OUT1.IN0
+IN11 => OUT1.IN1
+OUT1 <= OUT1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|xor4|MUX:m7|AND_gate:second_and
+IN10 => OUT1.IN0
+IN11 => OUT1.IN1
+OUT1 <= OUT1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|xor4|MUX:m7|OR_gate:final_or
+IN20 => OUT2.IN0
+IN21 => OUT2.IN1
+OUT2 <= OUT2.DB_MAX_OUTPUT_PORT_TYPE
+
+

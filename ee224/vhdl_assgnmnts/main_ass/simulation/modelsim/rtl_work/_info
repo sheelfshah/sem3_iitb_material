@@ -1,0 +1,196 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/simulation/modelsim
+Eand_gate
+Z1 w1606745853
+!i122 1
+R0
+Z2 8D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/AND_gate.vhd
+Z3 FD:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/AND_gate.vhd
+l0
+L1 1
+VNkNfH5Q6j5L^;UXhaGn6R0
+!s100 2W_;ECf4mQARFgH^g[Ya00
+Z4 OV;C;2020.1;71
+31
+Z5 !s110 1606748702
+!i10b 1
+Z6 !s108 1606748702.000000
+Z7 !s90 -reportprogress|300|-93|-work|work|D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/AND_gate.vhd|
+Z8 !s107 D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/AND_gate.vhd|
+!i113 1
+Z9 o-93 -work work
+Z10 tExplicit 1 CvgOpt 0
+Aarch_and
+DEx4 work 8 and_gate 0 22 NkNfH5Q6j5L^;UXhaGn6R0
+!i122 1
+l7
+L6 4
+VZAE1j1oEM2[P3`gOz1]2J1
+!s100 _Xc8A[WV7bVZ^n:CKCT[B1
+R4
+31
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
+Enot_gate
+Z11 w1606745728
+!i122 0
+R0
+Z12 8D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/NOT_gate.vhd
+Z13 FD:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/NOT_gate.vhd
+l0
+L1 1
+V9Nk32Ze[nGb_X8UzklWg73
+!s100 GKh488GgNSmf44WgA`2gX0
+R4
+31
+R5
+!i10b 1
+Z14 !s108 1606748701.000000
+Z15 !s90 -reportprogress|300|-93|-work|work|D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/NOT_gate.vhd|
+Z16 !s107 D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/NOT_gate.vhd|
+!i113 1
+R9
+R10
+Aarch_not
+DEx4 work 8 not_gate 0 22 9Nk32Ze[nGb_X8UzklWg73
+!i122 0
+l7
+L6 4
+VZ@z^0:12zOW2eGlD4Oh@h0
+!s100 6]k:WV4m28]Q>NCBiSCjj0
+R4
+31
+R5
+!i10b 1
+R14
+R15
+R16
+!i113 1
+R9
+R10
+Eor_gate
+Z17 w1606745903
+!i122 2
+R0
+Z18 8D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/OR_gate.vhd
+Z19 FD:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/OR_gate.vhd
+l0
+L1 1
+VQJPedoFO^c]R>o6^KI8BX0
+!s100 _V]bVKjf63LW6o=AU[F7b2
+R4
+31
+R5
+!i10b 1
+R6
+Z20 !s90 -reportprogress|300|-93|-work|work|D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/OR_gate.vhd|
+Z21 !s107 D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/OR_gate.vhd|
+!i113 1
+R9
+R10
+Aarch_or
+DEx4 work 7 or_gate 0 22 QJPedoFO^c]R>o6^KI8BX0
+!i122 2
+l7
+L6 4
+V;3Oi:6DTd>:WQQocjem<l3
+!s100 GZIUFU@UF]Ha6G]k^DIg]0
+R4
+31
+R5
+!i10b 1
+R6
+R20
+R21
+!i113 1
+R9
+R10
+Etb_nand
+Z22 w1606748516
+!i122 4
+R0
+Z23 8D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/TB_NAND.vhd
+Z24 FD:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/TB_NAND.vhd
+l0
+L3 1
+Vb0VT;N`;nJVGmPHdZhWbW0
+!s100 eOVNAS?>d5^V4i]^M2=Za1
+R4
+31
+Z25 !s110 1606748703
+!i10b 1
+R6
+Z26 !s90 -reportprogress|300|-93|-work|work|D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/TB_NAND.vhd|
+!s107 D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/TB_NAND.vhd|
+!i113 1
+R9
+R10
+Abehaviour_tb_nand
+DEx4 work 7 tb_nand 0 22 b0VT;N`;nJVGmPHdZhWbW0
+!i122 4
+l15
+L6 35
+VkD^hcH?U0U7Z83;0n9_1n0
+!s100 RP@bd5Ii_L`GLbL`0cS0^0
+R4
+31
+R25
+!i10b 1
+R6
+R26
+Z27 !s107 D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/TB_NAND.vhd|
+!i113 1
+R9
+R10
+Exor_gate
+Z28 w1606748481
+!i122 3
+R0
+Z29 8D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/XOR_gate.vhd
+Z30 FD:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/XOR_gate.vhd
+l0
+L1 1
+V?B`o3LH9;=0_e6ba@WF?_1
+!s100 fHde6aekLHg]DgS5PVQ`<0
+R4
+31
+R5
+!i10b 1
+R6
+Z31 !s90 -reportprogress|300|-93|-work|work|D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/XOR_gate.vhd|
+Z32 !s107 D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/XOR_gate.vhd|
+!i113 1
+R9
+R10
+Abehaviour_xor
+DEx4 work 8 xor_gate 0 22 ?B`o3LH9;=0_e6ba@WF?_1
+!i122 3
+l23
+L6 26
+VFLb08oNAbRnok]4z[04cj1
+!s100 ]?5jkY;Y7:CUUeiFXneN80
+R4
+31
+R5
+!i10b 1
+R6
+R31
+R32
+!i113 1
+R9
+R10

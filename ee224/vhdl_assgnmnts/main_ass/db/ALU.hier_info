@@ -1,0 +1,36 @@
+|XOR_gate
+I0 => NOT_gate:invert_I0.IN00
+I0 => AND_gate:first_and.IN10
+I1 => NOT_gate:invert_I1.IN00
+I1 => AND_gate:second_and.IN11
+O <= OR_gate:final_or.OUT2
+
+
+|XOR_gate|NOT_gate:invert_I0
+IN00 => OUT0.DATAIN
+OUT0 <= IN00.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|XOR_gate|NOT_gate:invert_I1
+IN00 => OUT0.DATAIN
+OUT0 <= IN00.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|XOR_gate|AND_gate:first_and
+IN10 => OUT1.IN0
+IN11 => OUT1.IN1
+OUT1 <= OUT1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|XOR_gate|AND_gate:second_and
+IN10 => OUT1.IN0
+IN11 => OUT1.IN1
+OUT1 <= OUT1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|XOR_gate|OR_gate:final_or
+IN20 => OUT2.IN0
+IN21 => OUT2.IN1
+OUT2 <= OUT2.DB_MAX_OUTPUT_PORT_TYPE
+
+

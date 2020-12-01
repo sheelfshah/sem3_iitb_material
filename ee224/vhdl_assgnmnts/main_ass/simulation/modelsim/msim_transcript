@@ -1,0 +1,79 @@
+# Reading pref.tcl
+# do ALU_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying D:/drbha/quartus_main/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/NOT_gate.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:35:01 on Nov 30,2020
+# vcom -reportprogress 300 -93 -work work D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/NOT_gate.vhd 
+# -- Loading package STANDARD
+# -- Compiling entity NOT_gate
+# -- Compiling architecture arch_not of NOT_gate
+# End time: 20:35:02 on Nov 30,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/AND_gate.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:35:02 on Nov 30,2020
+# vcom -reportprogress 300 -93 -work work D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/AND_gate.vhd 
+# -- Loading package STANDARD
+# -- Compiling entity AND_gate
+# -- Compiling architecture arch_and of AND_gate
+# End time: 20:35:02 on Nov 30,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/OR_gate.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:35:02 on Nov 30,2020
+# vcom -reportprogress 300 -93 -work work D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/OR_gate.vhd 
+# -- Loading package STANDARD
+# -- Compiling entity OR_gate
+# -- Compiling architecture arch_or of OR_gate
+# End time: 20:35:02 on Nov 30,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/XOR_gate.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:35:02 on Nov 30,2020
+# vcom -reportprogress 300 -93 -work work D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/XOR_gate.vhd 
+# -- Loading package STANDARD
+# -- Compiling entity XOR_gate
+# -- Compiling architecture behaviour_xor of XOR_gate
+# End time: 20:35:02 on Nov 30,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/TB_NAND.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:35:02 on Nov 30,2020
+# vcom -reportprogress 300 -93 -work work D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/TB_NAND.vhd 
+# -- Loading package STANDARD
+# -- Compiling entity TB_NAND
+# -- Compiling architecture behaviour_TB_nand of TB_NAND
+# End time: 20:35:03 on Nov 30,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  TB_NAND
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" TB_NAND 
+# Start time: 20:35:03 on Nov 30,2020
+# Loading std.standard
+# Loading work.tb_nand(behaviour_tb_nand)
+# Loading work.xor_gate(behaviour_xor)
+# Loading work.not_gate(arch_not)
+# Loading work.and_gate(arch_and)
+# Loading work.or_gate(arch_or)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Break key hit
+# Break in Architecture arch_not at D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/NOT_gate.vhd line 8
+# End time: 20:35:59 on Nov 30,2020, Elapsed time: 0:00:56
+# Errors: 0, Warnings: 0

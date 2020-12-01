@@ -1,0 +1,4 @@
+entity NAND_gate is 
+	port( I0, I1: in bit;
+			O: out bit);
+end MUX;
