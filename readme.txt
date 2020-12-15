@@ -1,26 +1,22 @@
 notes status:
-	all notes done till midsem
-	last week on
-	ee204: till week 5
+	all notes done
+	last week finished
+	ee204: done
 	ee224: done
 	ee229: done
 	ee325: done
-	ds203: till week 5
+	ds203: done
 	hs101: done
-	ma207: till week 3
+	ma207: done
 	ma205: done
 
-pending assignments:
-	ds203 x2
-	ee325
-
-grade exp:
-	ee204: ab/bb
+grades:
+	ee204: ab
 	ee224: bb
 	ee229: bb
 	ee325: ab
 	ds203: ab
 	hs101: ab
-	ma207: ab/bb
+	ma207: bc
 	ma205: ab
 	

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU
-Mon Nov 30 20:32:16 2020
+Thu Dec 03 21:22:48 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -14,9 +14,12 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Port Connectivity Checks: "KS16bitAdder:sub_part"
+ 11. Port Connectivity Checks: "KS16bitAdder:add_part"
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -43,14 +46,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Nov 30 20:32:16 2020       ;
+; Analysis & Synthesis Status     ; Successful - Thu Dec 03 21:22:48 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; ALU                                         ;
-; Top-level Entity Name           ; XOR_gate                                    ;
+; Top-level Entity Name           ; ALU                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 3                                           ;
+; Total pins                      ; 52                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -69,7 +72,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; XOR_gate           ; ALU                ;
+; Top-level entity name                                                           ; ALU                ; ALU                ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -166,53 +169,198 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                  ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                           ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
-; NOT_gate.vhd                     ; yes             ; User VHDL File  ; D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/NOT_gate.vhd ;         ;
-; AND_gate.vhd                     ; yes             ; User VHDL File  ; D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/AND_gate.vhd ;         ;
-; OR_gate.vhd                      ; yes             ; User VHDL File  ; D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/OR_gate.vhd  ;         ;
-; XOR_gate.vhd                     ; yes             ; User VHDL File  ; D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/XOR_gate.vhd ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                      ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
+; NAND_gate.vhd                    ; yes             ; User VHDL File  ; D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/NAND_gate.vhd    ;         ;
+; ALU.vhd                          ; yes             ; User VHDL File  ; D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/ALU.vhd          ;         ;
+; XOR_gate.vhd                     ; yes             ; User VHDL File  ; D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/XOR_gate.vhd     ;         ;
+; KS16bitAdder.vhd                 ; yes             ; User VHDL File  ; D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/KS16bitAdder.vhd ;         ;
+; LogicGates.vhd                   ; yes             ; User VHDL File  ; D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/LogicGates.vhd   ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                           ;
-+---------------------------------------------+-------------------------+
-; Resource                                    ; Usage                   ;
-+---------------------------------------------+-------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 1                       ;
-;                                             ;                         ;
-; Combinational ALUT usage for logic          ; 1                       ;
-;     -- 7 input functions                    ; 0                       ;
-;     -- 6 input functions                    ; 0                       ;
-;     -- 5 input functions                    ; 0                       ;
-;     -- 4 input functions                    ; 0                       ;
-;     -- <=3 input functions                  ; 1                       ;
-;                                             ;                         ;
-; Dedicated logic registers                   ; 0                       ;
-;                                             ;                         ;
-; I/O pins                                    ; 3                       ;
-;                                             ;                         ;
-; Total DSP Blocks                            ; 0                       ;
-;                                             ;                         ;
-; Maximum fan-out node                        ; OR_gate:final_or|OUT2~0 ;
-; Maximum fan-out                             ; 1                       ;
-; Total fan-out                               ; 6                       ;
-; Average fan-out                             ; 0.86                    ;
-+---------------------------------------------+-------------------------+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimate of Logic utilization (ALMs needed) ; 106      ;
+;                                             ;          ;
+; Combinational ALUT usage for logic          ; 174      ;
+;     -- 7 input functions                    ; 0        ;
+;     -- 6 input functions                    ; 37       ;
+;     -- 5 input functions                    ; 28       ;
+;     -- 4 input functions                    ; 63       ;
+;     -- <=3 input functions                  ; 46       ;
+;                                             ;          ;
+; Dedicated logic registers                   ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 52       ;
+;                                             ;          ;
+; Total DSP Blocks                            ; 0        ;
+;                                             ;          ;
+; Maximum fan-out node                        ; S0~input ;
+; Maximum fan-out                             ; 18       ;
+; Total fan-out                               ; 795      ;
+; Average fan-out                             ; 2.86     ;
++---------------------------------------------+----------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                           ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name        ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+-------------+--------------+
-; |XOR_gate                  ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 3    ; 0            ; |XOR_gate                  ; XOR_gate    ; work         ;
-;    |OR_gate:final_or|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |XOR_gate|OR_gate:final_or ; OR_gate     ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+-------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                              ;
++-----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------+--------------+--------------+
+; Compilation Hierarchy Node              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                             ; Entity Name  ; Library Name ;
++-----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------+--------------+--------------+
+; |ALU                                    ; 174 (29)            ; 0 (0)                     ; 0                 ; 0          ; 52   ; 0            ; |ALU                                                                            ; ALU          ; work         ;
+;    |KS16bitAdder:add_part|              ; 78 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part                                                      ; KS16bitAdder ; work         ;
+;       |ORGate:\zlogic:15:Orz0_ins|      ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|ORGate:\zlogic:15:Orz0_ins                           ; ORGate       ; work         ;
+;       |XorG:\XorGa:10:Xor_instance|     ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\XorGa:10:Xor_instance                          ; XorG         ; work         ;
+;          |ANDGAte:AND2_instance|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\XorGa:10:Xor_instance|ANDGAte:AND2_instance    ; ANDGAte      ; work         ;
+;          |ORGate:OR_instance|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\XorGa:10:Xor_instance|ORGate:OR_instance       ; ORGate       ; work         ;
+;       |XorG:\XorGa:11:Xor_instance|     ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\XorGa:11:Xor_instance                          ; XorG         ; work         ;
+;          |ORGate:OR_instance|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\XorGa:11:Xor_instance|ORGate:OR_instance       ; ORGate       ; work         ;
+;       |XorG:\XorGa:12:Xor_instance|     ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\XorGa:12:Xor_instance                          ; XorG         ; work         ;
+;          |ORGate:OR_instance|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\XorGa:12:Xor_instance|ORGate:OR_instance       ; ORGate       ; work         ;
+;       |XorG:\XorGa:13:Xor_instance|     ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\XorGa:13:Xor_instance                          ; XorG         ; work         ;
+;          |ANDGAte:AND2_instance|        ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\XorGa:13:Xor_instance|ANDGAte:AND2_instance    ; ANDGAte      ; work         ;
+;          |ORGate:OR_instance|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\XorGa:13:Xor_instance|ORGate:OR_instance       ; ORGate       ; work         ;
+;       |XorG:\XorGa:14:Xor_instance|     ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\XorGa:14:Xor_instance                          ; XorG         ; work         ;
+;          |ORGate:OR_instance|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\XorGa:14:Xor_instance|ORGate:OR_instance       ; ORGate       ; work         ;
+;       |XorG:\XorGa:15:Xor_instance|     ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\XorGa:15:Xor_instance                          ; XorG         ; work         ;
+;          |ORGate:OR_instance|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\XorGa:15:Xor_instance|ORGate:OR_instance       ; ORGate       ; work         ;
+;       |XorG:\XorGa:2:Xor_instance|      ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\XorGa:2:Xor_instance                           ; XorG         ; work         ;
+;          |ORGate:OR_instance|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\XorGa:2:Xor_instance|ORGate:OR_instance        ; ORGate       ; work         ;
+;       |XorG:\XorGa:3:Xor_instance|      ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\XorGa:3:Xor_instance                           ; XorG         ; work         ;
+;          |ORGate:OR_instance|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\XorGa:3:Xor_instance|ORGate:OR_instance        ; ORGate       ; work         ;
+;       |XorG:\XorGa:4:Xor_instance|      ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\XorGa:4:Xor_instance                           ; XorG         ; work         ;
+;          |ORGate:OR_instance|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\XorGa:4:Xor_instance|ORGate:OR_instance        ; ORGate       ; work         ;
+;       |XorG:\XorGa:5:Xor_instance|      ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\XorGa:5:Xor_instance                           ; XorG         ; work         ;
+;          |ORGate:OR_instance|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\XorGa:5:Xor_instance|ORGate:OR_instance        ; ORGate       ; work         ;
+;       |XorG:\XorGa:6:Xor_instance|      ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\XorGa:6:Xor_instance                           ; XorG         ; work         ;
+;          |ORGate:OR_instance|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\XorGa:6:Xor_instance|ORGate:OR_instance        ; ORGate       ; work         ;
+;       |XorG:\XorGa:7:Xor_instance|      ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\XorGa:7:Xor_instance                           ; XorG         ; work         ;
+;          |ORGate:OR_instance|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\XorGa:7:Xor_instance|ORGate:OR_instance        ; ORGate       ; work         ;
+;       |XorG:\XorGa:8:Xor_instance|      ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\XorGa:8:Xor_instance                           ; XorG         ; work         ;
+;          |ORGate:OR_instance|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\XorGa:8:Xor_instance|ORGate:OR_instance        ; ORGate       ; work         ;
+;       |XorG:\XorGa:9:Xor_instance|      ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\XorGa:9:Xor_instance                           ; XorG         ; work         ;
+;          |ORGate:OR_instance|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\XorGa:9:Xor_instance|ORGate:OR_instance        ; ORGate       ; work         ;
+;       |XorG:\finalstg:10:XorS_instance| ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\finalstg:10:XorS_instance                      ; XorG         ; work         ;
+;          |ORGate:OR_instance|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\finalstg:10:XorS_instance|ORGate:OR_instance   ; ORGate       ; work         ;
+;       |XorG:\finalstg:2:XorS_instance|  ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\finalstg:2:XorS_instance                       ; XorG         ; work         ;
+;          |ANDGAte:AND2_instance|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\finalstg:2:XorS_instance|ANDGAte:AND2_instance ; ANDGAte      ; work         ;
+;       |XorG:\finalstg:7:XorS_instance|  ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\finalstg:7:XorS_instance                       ; XorG         ; work         ;
+;          |ORGate:OR_instance|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\finalstg:7:XorS_instance|ORGate:OR_instance    ; ORGate       ; work         ;
+;       |XorG:\finalstg:9:XorS_instance|  ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\finalstg:9:XorS_instance                       ; XorG         ; work         ;
+;          |ORGate:OR_instance|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|XorG:\finalstg:9:XorS_instance|ORGate:OR_instance    ; ORGate       ; work         ;
+;       |grpop:\stg1:0:prefixcomp|        ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg1:0:prefixcomp                             ; grpop        ; work         ;
+;          |ORGate:Orga|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg1:0:prefixcomp|ORGate:Orga                 ; ORGate       ; work         ;
+;       |grpop:\stg1:11:prefixcomp|       ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg1:11:prefixcomp                            ; grpop        ; work         ;
+;          |ANDGAte:And0_instance|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg1:11:prefixcomp|ANDGAte:And0_instance      ; ANDGAte      ; work         ;
+;       |grpop:\stg1:12:prefixcomp|       ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg1:12:prefixcomp                            ; grpop        ; work         ;
+;          |ANDGAte:And0_instance|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg1:12:prefixcomp|ANDGAte:And0_instance      ; ANDGAte      ; work         ;
+;       |grpop:\stg2:0:prefixcomp|        ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg2:0:prefixcomp                             ; grpop        ; work         ;
+;          |ORGate:Orga|                  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg2:0:prefixcomp|ORGate:Orga                 ; ORGate       ; work         ;
+;       |grpop:\stg2:1:prefixcomp|        ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg2:1:prefixcomp                             ; grpop        ; work         ;
+;          |ORGate:Orga|                  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg2:1:prefixcomp|ORGate:Orga                 ; ORGate       ; work         ;
+;       |grpop:\stg2:2:prefixcomp|        ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg2:2:prefixcomp                             ; grpop        ; work         ;
+;          |ORGate:Orga|                  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg2:2:prefixcomp|ORGate:Orga                 ; ORGate       ; work         ;
+;       |grpop:\stg2:3:prefixcomp|        ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg2:3:prefixcomp                             ; grpop        ; work         ;
+;          |ORGate:Orga|                  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg2:3:prefixcomp|ORGate:Orga                 ; ORGate       ; work         ;
+;       |grpop:\stg2:4:prefixcomp|        ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg2:4:prefixcomp                             ; grpop        ; work         ;
+;          |ORGate:Orga|                  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg2:4:prefixcomp|ORGate:Orga                 ; ORGate       ; work         ;
+;       |grpop:\stg2:5:prefixcomp|        ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg2:5:prefixcomp                             ; grpop        ; work         ;
+;          |ORGate:Orga|                  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg2:5:prefixcomp|ORGate:Orga                 ; ORGate       ; work         ;
+;       |grpop:\stg2:6:prefixcomp|        ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg2:6:prefixcomp                             ; grpop        ; work         ;
+;          |ORGate:Orga|                  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg2:6:prefixcomp|ORGate:Orga                 ; ORGate       ; work         ;
+;       |grpop:\stg2:7:prefixcomp|        ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg2:7:prefixcomp                             ; grpop        ; work         ;
+;          |ORGate:Orga|                  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg2:7:prefixcomp|ORGate:Orga                 ; ORGate       ; work         ;
+;       |grpop:\stg2:8:prefixcomp|        ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg2:8:prefixcomp                             ; grpop        ; work         ;
+;          |ORGate:Orga|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg2:8:prefixcomp|ORGate:Orga                 ; ORGate       ; work         ;
+;       |grpop:\stg2:9:prefixcomp|        ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg2:9:prefixcomp                             ; grpop        ; work         ;
+;          |ORGate:Orga|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg2:9:prefixcomp|ORGate:Orga                 ; ORGate       ; work         ;
+;       |grpop:\stg32:0:prefixcomp|       ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg32:0:prefixcomp                            ; grpop        ; work         ;
+;          |ANDGAte:And0_instance|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg32:0:prefixcomp|ANDGAte:And0_instance      ; ANDGAte      ; work         ;
+;          |ORGate:Orga|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg32:0:prefixcomp|ORGate:Orga                ; ORGate       ; work         ;
+;       |grpop:\stg32:1:prefixcomp|       ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg32:1:prefixcomp                            ; grpop        ; work         ;
+;          |ANDGAte:And0_instance|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg32:1:prefixcomp|ANDGAte:And0_instance      ; ANDGAte      ; work         ;
+;          |ORGate:Orga|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg32:1:prefixcomp|ORGate:Orga                ; ORGate       ; work         ;
+;       |grpop:\stg32:2:prefixcomp|       ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg32:2:prefixcomp                            ; grpop        ; work         ;
+;          |ORGate:Orga|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg32:2:prefixcomp|ORGate:Orga                ; ORGate       ; work         ;
+;       |grpop:\stg32:3:prefixcomp|       ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg32:3:prefixcomp                            ; grpop        ; work         ;
+;          |ORGate:Orga|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg32:3:prefixcomp|ORGate:Orga                ; ORGate       ; work         ;
+;       |grpop:\stg32:4:prefixcomp|       ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg32:4:prefixcomp                            ; grpop        ; work         ;
+;          |ANDGAte:And0_instance|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg32:4:prefixcomp|ANDGAte:And0_instance      ; ANDGAte      ; work         ;
+;       |grpop:\stg32:5:prefixcomp|       ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg32:5:prefixcomp                            ; grpop        ; work         ;
+;          |ANDGAte:And0_instance|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg32:5:prefixcomp|ANDGAte:And0_instance      ; ANDGAte      ; work         ;
+;       |grpop:\stg32:6:prefixcomp|       ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg32:6:prefixcomp                            ; grpop        ; work         ;
+;          |ANDGAte:And0_instance|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg32:6:prefixcomp|ANDGAte:And0_instance      ; ANDGAte      ; work         ;
+;       |grpop:\stg32:7:prefixcomp|       ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg32:7:prefixcomp                            ; grpop        ; work         ;
+;          |ANDGAte:And0_instance|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg32:7:prefixcomp|ANDGAte:And0_instance      ; ANDGAte      ; work         ;
+;       |grpop:\stg42:0:prefixcomp|       ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg42:0:prefixcomp                            ; grpop        ; work         ;
+;          |ORGate:Orga|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg42:0:prefixcomp|ORGate:Orga                ; ORGate       ; work         ;
+;       |grpop:\stg42:1:prefixcomp|       ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg42:1:prefixcomp                            ; grpop        ; work         ;
+;          |ANDGAte:And0_instance|        ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg42:1:prefixcomp|ANDGAte:And0_instance      ; ANDGAte      ; work         ;
+;          |ORGate:Orga|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg42:1:prefixcomp|ORGate:Orga                ; ORGate       ; work         ;
+;       |grpop:\stg42:2:prefixcomp|       ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg42:2:prefixcomp                            ; grpop        ; work         ;
+;          |ANDGAte:And0_instance|        ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg42:2:prefixcomp|ANDGAte:And0_instance      ; ANDGAte      ; work         ;
+;          |ORGate:Orga|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg42:2:prefixcomp|ORGate:Orga                ; ORGate       ; work         ;
+;       |grpop:\stg42:3:prefixcomp|       ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg42:3:prefixcomp                            ; grpop        ; work         ;
+;          |ANDGAte:And0_instance|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg42:3:prefixcomp|ANDGAte:And0_instance      ; ANDGAte      ; work         ;
+;          |ORGate:Orga|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg42:3:prefixcomp|ORGate:Orga                ; ORGate       ; work         ;
+;       |grpop:\stg42:4:prefixcomp|       ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg42:4:prefixcomp                            ; grpop        ; work         ;
+;          |ORGate:Orga|                  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg42:4:prefixcomp|ORGate:Orga                ; ORGate       ; work         ;
+;       |grpop:\stg42:5:prefixcomp|       ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg42:5:prefixcomp                            ; grpop        ; work         ;
+;          |ORGate:Orga|                  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg42:5:prefixcomp|ORGate:Orga                ; ORGate       ; work         ;
+;       |grpop:\stg42:6:prefixcomp|       ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg42:6:prefixcomp                            ; grpop        ; work         ;
+;          |ORGate:Orga|                  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg42:6:prefixcomp|ORGate:Orga                ; ORGate       ; work         ;
+;       |grpop:\stg42:7:prefixcomp|       ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg42:7:prefixcomp                            ; grpop        ; work         ;
+;          |ORGate:Orga|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:add_part|grpop:\stg42:7:prefixcomp|ORGate:Orga                ; ORGate       ; work         ;
+;    |KS16bitAdder:sub_part|              ; 57 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part                                                      ; KS16bitAdder ; work         ;
+;       |ORGate:\finalstg:10:OrS_ins|     ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|ORGate:\finalstg:10:OrS_ins                          ; ORGate       ; work         ;
+;       |ORGate:\finalstg:11:OrS_ins|     ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|ORGate:\finalstg:11:OrS_ins                          ; ORGate       ; work         ;
+;       |ORGate:\finalstg:12:OrS_ins|     ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|ORGate:\finalstg:12:OrS_ins                          ; ORGate       ; work         ;
+;       |ORGate:\finalstg:13:OrS_ins|     ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|ORGate:\finalstg:13:OrS_ins                          ; ORGate       ; work         ;
+;       |ORGate:\finalstg:14:OrS_ins|     ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|ORGate:\finalstg:14:OrS_ins                          ; ORGate       ; work         ;
+;       |ORGate:\finalstg:15:OrS_ins|     ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|ORGate:\finalstg:15:OrS_ins                          ; ORGate       ; work         ;
+;       |ORGate:\finalstg:16:OrS_ins|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|ORGate:\finalstg:16:OrS_ins                          ; ORGate       ; work         ;
+;       |ORGate:\finalstg:4:OrS_ins|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|ORGate:\finalstg:4:OrS_ins                           ; ORGate       ; work         ;
+;       |ORGate:\finalstg:5:OrS_ins|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|ORGate:\finalstg:5:OrS_ins                           ; ORGate       ; work         ;
+;       |ORGate:\finalstg:6:OrS_ins|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|ORGate:\finalstg:6:OrS_ins                           ; ORGate       ; work         ;
+;       |ORGate:\finalstg:7:OrS_ins|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|ORGate:\finalstg:7:OrS_ins                           ; ORGate       ; work         ;
+;       |ORGate:\finalstg:8:OrS_ins|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|ORGate:\finalstg:8:OrS_ins                           ; ORGate       ; work         ;
+;       |ORGate:\finalstg:9:OrS_ins|      ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|ORGate:\finalstg:9:OrS_ins                           ; ORGate       ; work         ;
+;       |XorG:\finalstg:9:XorS_instance|  ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|XorG:\finalstg:9:XorS_instance                       ; XorG         ; work         ;
+;          |ORGate:OR_instance|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|XorG:\finalstg:9:XorS_instance|ORGate:OR_instance    ; ORGate       ; work         ;
+;       |grpop:\stg1:12:prefixcomp|       ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|grpop:\stg1:12:prefixcomp                            ; grpop        ; work         ;
+;          |ANDGAte:And0_instance|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|grpop:\stg1:12:prefixcomp|ANDGAte:And0_instance      ; ANDGAte      ; work         ;
+;       |grpop:\stg1:2:prefixcomp|        ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|grpop:\stg1:2:prefixcomp                             ; grpop        ; work         ;
+;          |ANDGAte:Andgat|               ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|grpop:\stg1:2:prefixcomp|ANDGAte:Andgat              ; ANDGAte      ; work         ;
+;       |grpop:\stg2:1:prefixcomp|        ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|grpop:\stg2:1:prefixcomp                             ; grpop        ; work         ;
+;          |ORGate:Orga|                  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|grpop:\stg2:1:prefixcomp|ORGate:Orga                 ; ORGate       ; work         ;
+;       |grpop:\stg2:2:prefixcomp|        ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|grpop:\stg2:2:prefixcomp                             ; grpop        ; work         ;
+;          |ORGate:Orga|                  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|grpop:\stg2:2:prefixcomp|ORGate:Orga                 ; ORGate       ; work         ;
+;       |grpop:\stg2:3:prefixcomp|        ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|grpop:\stg2:3:prefixcomp                             ; grpop        ; work         ;
+;          |ORGate:Orga|                  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|grpop:\stg2:3:prefixcomp|ORGate:Orga                 ; ORGate       ; work         ;
+;       |grpop:\stg2:4:prefixcomp|        ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|grpop:\stg2:4:prefixcomp                             ; grpop        ; work         ;
+;          |ORGate:Orga|                  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|grpop:\stg2:4:prefixcomp|ORGate:Orga                 ; ORGate       ; work         ;
+;       |grpop:\stg2:5:prefixcomp|        ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|grpop:\stg2:5:prefixcomp                             ; grpop        ; work         ;
+;          |ORGate:Orga|                  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|grpop:\stg2:5:prefixcomp|ORGate:Orga                 ; ORGate       ; work         ;
+;       |grpop:\stg2:6:prefixcomp|        ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|grpop:\stg2:6:prefixcomp                             ; grpop        ; work         ;
+;          |ORGate:Orga|                  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|grpop:\stg2:6:prefixcomp|ORGate:Orga                 ; ORGate       ; work         ;
+;       |grpop:\stg2:7:prefixcomp|        ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|grpop:\stg2:7:prefixcomp                             ; grpop        ; work         ;
+;          |ORGate:Orga|                  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|grpop:\stg2:7:prefixcomp|ORGate:Orga                 ; ORGate       ; work         ;
+;       |grpop:\stg2:8:prefixcomp|        ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|grpop:\stg2:8:prefixcomp                             ; grpop        ; work         ;
+;          |ORGate:Orga|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|grpop:\stg2:8:prefixcomp|ORGate:Orga                 ; ORGate       ; work         ;
+;       |grpop:\stg2:9:prefixcomp|        ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|grpop:\stg2:9:prefixcomp                             ; grpop        ; work         ;
+;          |ORGate:Orga|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|grpop:\stg2:9:prefixcomp|ORGate:Orga                 ; ORGate       ; work         ;
+;       |grpop:\stg32:3:prefixcomp|       ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|grpop:\stg32:3:prefixcomp                            ; grpop        ; work         ;
+;          |ANDGAte:And0_instance|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KS16bitAdder:sub_part|grpop:\stg32:3:prefixcomp|ANDGAte:And0_instance      ; ANDGAte      ; work         ;
+;    |NAND_gate:nand_part|                ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|NAND_gate:nand_part                                                        ; NAND_gate    ; work         ;
+;    |XOR_gate:xor_part|                  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|XOR_gate:xor_part                                                          ; XOR_gate     ; work         ;
++-----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -231,18 +379,50 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 4:1                ; 17 bits   ; 34 LEs        ; 34 LEs               ; 0 LEs                  ; No         ; |ALU|Z                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "KS16bitAdder:sub_part"                                                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cin  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; zero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "KS16bitAdder:add_part" ;
++------+-------+----------+-------------------------+
+; Port ; Type  ; Severity ; Details                 ;
++------+-------+----------+-------------------------+
+; cin  ; Input ; Info     ; Stuck at GND            ;
++------+-------+----------+-------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 1                           ;
-;     normal            ; 1                           ;
-;         2 data inputs ; 1                           ;
-; boundary_port         ; 3                           ;
+; arriav_lcell_comb     ; 174                         ;
+;     normal            ; 174                         ;
+;         2 data inputs ; 27                          ;
+;         3 data inputs ; 19                          ;
+;         4 data inputs ; 63                          ;
+;         5 data inputs ; 28                          ;
+;         6 data inputs ; 37                          ;
+; boundary_port         ; 52                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 1.00                        ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 6.47                        ;
 +-----------------------+-----------------------------+
 
 
@@ -251,7 +431,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -261,46 +441,61 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Nov 30 20:32:00 2020
+    Info: Processing started: Thu Dec 03 21:22:30 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file not_gate.vhd
-    Info (12022): Found design unit 1: NOT_gate-arch_not File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/NOT_gate.vhd Line: 6
-    Info (12023): Found entity 1: NOT_gate File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/NOT_gate.vhd Line: 1
-Info (12021): Found 2 design units, including 1 entities, in source file and_gate.vhd
-    Info (12022): Found design unit 1: AND_gate-arch_and File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/AND_gate.vhd Line: 6
-    Info (12023): Found entity 1: AND_gate File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/AND_gate.vhd Line: 1
-Info (12021): Found 2 design units, including 1 entities, in source file or_gate.vhd
-    Info (12022): Found design unit 1: OR_gate-arch_or File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/OR_gate.vhd Line: 6
-    Info (12023): Found entity 1: OR_gate File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/OR_gate.vhd Line: 1
 Info (12021): Found 2 design units, including 1 entities, in source file nand_gate.vhd
-    Info (12022): Found design unit 1: NAND_gate-behaviour_nand File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/NAND_gate.vhd Line: 6
+    Info (12022): Found design unit 1: NAND_gate-behaviour_nand File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/NAND_gate.vhd Line: 8
     Info (12023): Found entity 1: NAND_gate File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/NAND_gate.vhd Line: 1
-Info (12021): Found 2 design units, including 1 entities, in source file tb_nand.vhd
-    Info (12022): Found design unit 1: TB_NAND-behaviour_TB_nand File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/TB_NAND.vhd Line: 6
-    Info (12023): Found entity 1: TB_NAND File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/TB_NAND.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
-    Info (12022): Found design unit 1: ALU-behaviour_alu File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/ALU.vhd Line: 6
+    Info (12022): Found design unit 1: ALU-behaviour_alu File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/ALU.vhd Line: 9
     Info (12023): Found entity 1: ALU File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/ALU.vhd Line: 1
 Info (12021): Found 2 design units, including 1 entities, in source file xor_gate.vhd
-    Info (12022): Found design unit 1: XOR_gate-behaviour_xor File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/XOR_gate.vhd Line: 6
+    Info (12022): Found design unit 1: XOR_gate-behaviour_xor File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/XOR_gate.vhd Line: 8
     Info (12023): Found entity 1: XOR_gate File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/XOR_gate.vhd Line: 1
-Info (12127): Elaborating entity "XOR_gate" for the top level hierarchy
-Info (12128): Elaborating entity "NOT_gate" for hierarchy "NOT_gate:invert_I0" File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/XOR_gate.vhd Line: 25
-Info (12128): Elaborating entity "AND_gate" for hierarchy "AND_gate:first_and" File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/XOR_gate.vhd Line: 27
-Info (12128): Elaborating entity "OR_gate" for hierarchy "OR_gate:final_or" File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/XOR_gate.vhd Line: 29
+Info (12021): Found 2 design units, including 1 entities, in source file tb_alu.vhd
+    Info (12022): Found design unit 1: TB_ALU-behaviour_TB_alu File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/TB_ALU.vhd Line: 6
+    Info (12023): Found entity 1: TB_ALU File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/TB_ALU.vhd Line: 3
+Info (12021): Found 4 design units, including 2 entities, in source file ks16bitadder.vhd
+    Info (12022): Found design unit 1: grpop-grpfn File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/KS16bitAdder.vhd Line: 16
+    Info (12022): Found design unit 2: KS16bitAdder-KS16bitAdder_bhv File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/KS16bitAdder.vhd Line: 42
+    Info (12023): Found entity 1: KS16bitAdder File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/KS16bitAdder.vhd Line: 1
+    Info (12023): Found entity 2: grpop File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/KS16bitAdder.vhd Line: 10
+Info (12021): Found 12 design units, including 6 entities, in source file logicgates.vhd
+    Info (12022): Found design unit 1: ANDGAte-AND_function File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/LogicGates.vhd Line: 8
+    Info (12022): Found design unit 2: ORGate-OR_function File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/LogicGates.vhd Line: 18
+    Info (12022): Found design unit 3: NotGate-Not_function File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/LogicGates.vhd Line: 28
+    Info (12022): Found design unit 4: NANDGate-NAND_function File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/LogicGates.vhd Line: 37
+    Info (12022): Found design unit 5: XorG-Xor_fn File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/LogicGates.vhd Line: 51
+    Info (12022): Found design unit 6: LogicGates-LogicGates_bhv File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/LogicGates.vhd Line: 87
+    Info (12023): Found entity 1: LogicGates File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/LogicGates.vhd Line: 1
+    Info (12023): Found entity 2: ANDGAte File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/LogicGates.vhd Line: 4
+    Info (12023): Found entity 3: ORGate File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/LogicGates.vhd Line: 14
+    Info (12023): Found entity 4: NotGate File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/LogicGates.vhd Line: 24
+    Info (12023): Found entity 5: NANDGate File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/LogicGates.vhd Line: 34
+    Info (12023): Found entity 6: XorG File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/LogicGates.vhd Line: 45
+Info (12127): Elaborating entity "ALU" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(15): object "temp_zero1" assigned a value but never read File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/ALU.vhd Line: 15
+Info (12128): Elaborating entity "NAND_gate" for hierarchy "NAND_gate:nand_part" File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/ALU.vhd Line: 45
+Info (12128): Elaborating entity "XOR_gate" for hierarchy "XOR_gate:xor_part" File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/ALU.vhd Line: 48
+Info (12128): Elaborating entity "KS16bitAdder" for hierarchy "KS16bitAdder:add_part" File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/ALU.vhd Line: 51
+Info (12128): Elaborating entity "XorG" for hierarchy "KS16bitAdder:add_part|XorG:\XorGa:0:Xor_instance" File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/KS16bitAdder.vhd Line: 76
+Info (12128): Elaborating entity "NotGate" for hierarchy "KS16bitAdder:add_part|XorG:\XorGa:0:Xor_instance|NotGate:Not1_instance" File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/LogicGates.vhd Line: 70
+Info (12128): Elaborating entity "ANDGAte" for hierarchy "KS16bitAdder:add_part|XorG:\XorGa:0:Xor_instance|ANDGAte:AND1_instance" File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/LogicGates.vhd Line: 76
+Info (12128): Elaborating entity "ORGate" for hierarchy "KS16bitAdder:add_part|XorG:\XorGa:0:Xor_instance|ORGate:OR_instance" File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/LogicGates.vhd Line: 82
+Info (12128): Elaborating entity "grpop" for hierarchy "KS16bitAdder:add_part|grpop:\stg1:0:prefixcomp" File: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/KS16bitAdder.vhd Line: 94
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 4 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 1 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4856 megabytes
-    Info: Processing ended: Mon Nov 30 20:32:16 2020
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:27
+Info (21057): Implemented 226 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 34 input pins
+    Info (21059): Implemented 18 output pins
+    Info (21061): Implemented 174 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4865 megabytes
+    Info: Processing ended: Thu Dec 03 21:22:48 2020
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:26
 
 

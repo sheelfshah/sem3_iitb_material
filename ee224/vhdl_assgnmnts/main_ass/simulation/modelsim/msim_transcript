@@ -10,62 +10,91 @@
 # Copying D:/drbha/quartus_main/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/NOT_gate.vhd}
+# vcom -93 -work work {D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/NAND_gate.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:35:01 on Nov 30,2020
-# vcom -reportprogress 300 -93 -work work D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/NOT_gate.vhd 
+# Start time: 21:24:34 on Dec 03,2020
+# vcom -reportprogress 300 -93 -work work D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/NAND_gate.vhd 
 # -- Loading package STANDARD
-# -- Compiling entity NOT_gate
-# -- Compiling architecture arch_not of NOT_gate
-# End time: 20:35:02 on Nov 30,2020, Elapsed time: 0:00:01
+# -- Compiling entity NAND_gate
+# -- Compiling architecture behaviour_nand of NAND_gate
+# End time: 21:24:35 on Dec 03,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/AND_gate.vhd}
+# vcom -93 -work work {D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/ALU.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:35:02 on Nov 30,2020
-# vcom -reportprogress 300 -93 -work work D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/AND_gate.vhd 
+# Start time: 21:24:35 on Dec 03,2020
+# vcom -reportprogress 300 -93 -work work D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/ALU.vhd 
 # -- Loading package STANDARD
-# -- Compiling entity AND_gate
-# -- Compiling architecture arch_and of AND_gate
-# End time: 20:35:02 on Nov 30,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/OR_gate.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:35:02 on Nov 30,2020
-# vcom -reportprogress 300 -93 -work work D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/OR_gate.vhd 
-# -- Loading package STANDARD
-# -- Compiling entity OR_gate
-# -- Compiling architecture arch_or of OR_gate
-# End time: 20:35:02 on Nov 30,2020, Elapsed time: 0:00:00
+# -- Compiling entity ALU
+# -- Compiling architecture behaviour_alu of ALU
+# End time: 21:24:35 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/XOR_gate.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:35:02 on Nov 30,2020
+# Start time: 21:24:35 on Dec 03,2020
 # vcom -reportprogress 300 -93 -work work D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/XOR_gate.vhd 
 # -- Loading package STANDARD
 # -- Compiling entity XOR_gate
 # -- Compiling architecture behaviour_xor of XOR_gate
-# End time: 20:35:02 on Nov 30,2020, Elapsed time: 0:00:00
+# End time: 21:24:35 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# 
-# vcom -93 -work work {D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/TB_NAND.vhd}
+# vcom -93 -work work {D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/KS16bitAdder.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:35:02 on Nov 30,2020
-# vcom -reportprogress 300 -93 -work work D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/TB_NAND.vhd 
+# Start time: 21:24:35 on Dec 03,2020
+# vcom -reportprogress 300 -93 -work work D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/KS16bitAdder.vhd 
 # -- Loading package STANDARD
-# -- Compiling entity TB_NAND
-# -- Compiling architecture behaviour_TB_nand of TB_NAND
-# End time: 20:35:03 on Nov 30,2020, Elapsed time: 0:00:01
+# -- Compiling entity KS16bitAdder
+# -- Compiling entity grpop
+# -- Compiling architecture grpfn of grpop
+# -- Compiling architecture KS16bitAdder_bhv of KS16bitAdder
+# ** Warning: D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/KS16bitAdder.vhd(143): Cannot associate port "yout" of mode OUT with port "ans" of mode BUFFER.
+# End time: 21:24:35 on Dec 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vcom -93 -work work {D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/LogicGates.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:24:35 on Dec 03,2020
+# vcom -reportprogress 300 -93 -work work D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/LogicGates.vhd 
+# -- Loading package STANDARD
+# -- Compiling entity LogicGates
+# -- Compiling entity ANDGAte
+# -- Compiling architecture AND_function of ANDGAte
+# -- Compiling entity ORGate
+# -- Compiling architecture OR_function of ORGate
+# -- Compiling entity NotGate
+# -- Compiling architecture Not_function of NotGate
+# -- Compiling entity NANDGate
+# -- Compiling architecture NAND_function of NANDGate
+# -- Compiling entity XorG
+# -- Compiling architecture Xor_fn of XorG
+# -- Compiling architecture LogicGates_bhv of LogicGates
+# End time: 21:24:36 on Dec 03,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  TB_NAND
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" TB_NAND 
-# Start time: 20:35:03 on Nov 30,2020
+# vcom -93 -work work {D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/TB_ALU.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:24:36 on Dec 03,2020
+# vcom -reportprogress 300 -93 -work work D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/TB_ALU.vhd 
+# -- Loading package STANDARD
+# -- Compiling entity TB_ALU
+# -- Compiling architecture behaviour_TB_alu of TB_ALU
+# End time: 21:24:36 on Dec 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  TB_ALU
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" TB_ALU 
+# Start time: 21:24:38 on Dec 03,2020
 # Loading std.standard
-# Loading work.tb_nand(behaviour_tb_nand)
+# Loading work.tb_alu(behaviour_tb_alu)
+# Loading work.alu(behaviour_alu)
+# Loading work.nand_gate(behaviour_nand)
 # Loading work.xor_gate(behaviour_xor)
-# Loading work.not_gate(arch_not)
-# Loading work.and_gate(arch_and)
-# Loading work.or_gate(arch_or)
+# Loading work.ks16bitadder(ks16bitadder_bhv)
+# Loading work.xorg(xor_fn)
+# Loading work.notgate(not_function)
+# Loading work.andgate(and_function)
+# Loading work.orgate(or_function)
+# Loading work.grpop(grpfn)
+# ** Warning: Design size of 11535 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
 # 
 # add wave *
 # view structure
@@ -74,6 +103,6 @@
 # .main_pane.objects.interior.cs.body.tree
 # run -all
 # Break key hit
-# Break in Architecture arch_not at D:/drbha/sem3_iitb_material/ee224/vhdl_assgnmnts/main_ass/NOT_gate.vhd line 8
-# End time: 20:35:59 on Nov 30,2020, Elapsed time: 0:00:56
-# Errors: 0, Warnings: 0
+# Simulation stop requested.
+# End time: 21:25:48 on Dec 03,2020, Elapsed time: 0:01:10
+# Errors: 0, Warnings: 1

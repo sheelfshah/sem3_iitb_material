@@ -1,36 +1,6289 @@
-|XOR_gate
-I0 => NOT_gate:invert_I0.IN00
-I0 => AND_gate:first_and.IN10
-I1 => NOT_gate:invert_I1.IN00
-I1 => AND_gate:second_and.IN11
-O <= OR_gate:final_or.OUT2
+|ALU
+IN1[0] => NAND_gate:nand_part.A[0]
+IN1[0] => XOR_gate:xor_part.A[0]
+IN1[0] => KS16bitAdder:add_part.A[0]
+IN1[0] => KS16bitAdder:sub_part.A[0]
+IN1[1] => NAND_gate:nand_part.A[1]
+IN1[1] => XOR_gate:xor_part.A[1]
+IN1[1] => KS16bitAdder:add_part.A[1]
+IN1[1] => KS16bitAdder:sub_part.A[1]
+IN1[2] => NAND_gate:nand_part.A[2]
+IN1[2] => XOR_gate:xor_part.A[2]
+IN1[2] => KS16bitAdder:add_part.A[2]
+IN1[2] => KS16bitAdder:sub_part.A[2]
+IN1[3] => NAND_gate:nand_part.A[3]
+IN1[3] => XOR_gate:xor_part.A[3]
+IN1[3] => KS16bitAdder:add_part.A[3]
+IN1[3] => KS16bitAdder:sub_part.A[3]
+IN1[4] => NAND_gate:nand_part.A[4]
+IN1[4] => XOR_gate:xor_part.A[4]
+IN1[4] => KS16bitAdder:add_part.A[4]
+IN1[4] => KS16bitAdder:sub_part.A[4]
+IN1[5] => NAND_gate:nand_part.A[5]
+IN1[5] => XOR_gate:xor_part.A[5]
+IN1[5] => KS16bitAdder:add_part.A[5]
+IN1[5] => KS16bitAdder:sub_part.A[5]
+IN1[6] => NAND_gate:nand_part.A[6]
+IN1[6] => XOR_gate:xor_part.A[6]
+IN1[6] => KS16bitAdder:add_part.A[6]
+IN1[6] => KS16bitAdder:sub_part.A[6]
+IN1[7] => NAND_gate:nand_part.A[7]
+IN1[7] => XOR_gate:xor_part.A[7]
+IN1[7] => KS16bitAdder:add_part.A[7]
+IN1[7] => KS16bitAdder:sub_part.A[7]
+IN1[8] => NAND_gate:nand_part.A[8]
+IN1[8] => XOR_gate:xor_part.A[8]
+IN1[8] => KS16bitAdder:add_part.A[8]
+IN1[8] => KS16bitAdder:sub_part.A[8]
+IN1[9] => NAND_gate:nand_part.A[9]
+IN1[9] => XOR_gate:xor_part.A[9]
+IN1[9] => KS16bitAdder:add_part.A[9]
+IN1[9] => KS16bitAdder:sub_part.A[9]
+IN1[10] => NAND_gate:nand_part.A[10]
+IN1[10] => XOR_gate:xor_part.A[10]
+IN1[10] => KS16bitAdder:add_part.A[10]
+IN1[10] => KS16bitAdder:sub_part.A[10]
+IN1[11] => NAND_gate:nand_part.A[11]
+IN1[11] => XOR_gate:xor_part.A[11]
+IN1[11] => KS16bitAdder:add_part.A[11]
+IN1[11] => KS16bitAdder:sub_part.A[11]
+IN1[12] => NAND_gate:nand_part.A[12]
+IN1[12] => XOR_gate:xor_part.A[12]
+IN1[12] => KS16bitAdder:add_part.A[12]
+IN1[12] => KS16bitAdder:sub_part.A[12]
+IN1[13] => NAND_gate:nand_part.A[13]
+IN1[13] => XOR_gate:xor_part.A[13]
+IN1[13] => KS16bitAdder:add_part.A[13]
+IN1[13] => KS16bitAdder:sub_part.A[13]
+IN1[14] => NAND_gate:nand_part.A[14]
+IN1[14] => XOR_gate:xor_part.A[14]
+IN1[14] => KS16bitAdder:add_part.A[14]
+IN1[14] => KS16bitAdder:sub_part.A[14]
+IN1[15] => NAND_gate:nand_part.A[15]
+IN1[15] => XOR_gate:xor_part.A[15]
+IN1[15] => KS16bitAdder:add_part.A[15]
+IN1[15] => KS16bitAdder:sub_part.A[15]
+IN2[0] => NAND_gate:nand_part.B[0]
+IN2[0] => XOR_gate:xor_part.B[0]
+IN2[0] => KS16bitAdder:add_part.B[0]
+IN2[0] => KS16bitAdder:sub_part.B[0]
+IN2[1] => NAND_gate:nand_part.B[1]
+IN2[1] => XOR_gate:xor_part.B[1]
+IN2[1] => KS16bitAdder:add_part.B[1]
+IN2[1] => KS16bitAdder:sub_part.B[1]
+IN2[2] => NAND_gate:nand_part.B[2]
+IN2[2] => XOR_gate:xor_part.B[2]
+IN2[2] => KS16bitAdder:add_part.B[2]
+IN2[2] => KS16bitAdder:sub_part.B[2]
+IN2[3] => NAND_gate:nand_part.B[3]
+IN2[3] => XOR_gate:xor_part.B[3]
+IN2[3] => KS16bitAdder:add_part.B[3]
+IN2[3] => KS16bitAdder:sub_part.B[3]
+IN2[4] => NAND_gate:nand_part.B[4]
+IN2[4] => XOR_gate:xor_part.B[4]
+IN2[4] => KS16bitAdder:add_part.B[4]
+IN2[4] => KS16bitAdder:sub_part.B[4]
+IN2[5] => NAND_gate:nand_part.B[5]
+IN2[5] => XOR_gate:xor_part.B[5]
+IN2[5] => KS16bitAdder:add_part.B[5]
+IN2[5] => KS16bitAdder:sub_part.B[5]
+IN2[6] => NAND_gate:nand_part.B[6]
+IN2[6] => XOR_gate:xor_part.B[6]
+IN2[6] => KS16bitAdder:add_part.B[6]
+IN2[6] => KS16bitAdder:sub_part.B[6]
+IN2[7] => NAND_gate:nand_part.B[7]
+IN2[7] => XOR_gate:xor_part.B[7]
+IN2[7] => KS16bitAdder:add_part.B[7]
+IN2[7] => KS16bitAdder:sub_part.B[7]
+IN2[8] => NAND_gate:nand_part.B[8]
+IN2[8] => XOR_gate:xor_part.B[8]
+IN2[8] => KS16bitAdder:add_part.B[8]
+IN2[8] => KS16bitAdder:sub_part.B[8]
+IN2[9] => NAND_gate:nand_part.B[9]
+IN2[9] => XOR_gate:xor_part.B[9]
+IN2[9] => KS16bitAdder:add_part.B[9]
+IN2[9] => KS16bitAdder:sub_part.B[9]
+IN2[10] => NAND_gate:nand_part.B[10]
+IN2[10] => XOR_gate:xor_part.B[10]
+IN2[10] => KS16bitAdder:add_part.B[10]
+IN2[10] => KS16bitAdder:sub_part.B[10]
+IN2[11] => NAND_gate:nand_part.B[11]
+IN2[11] => XOR_gate:xor_part.B[11]
+IN2[11] => KS16bitAdder:add_part.B[11]
+IN2[11] => KS16bitAdder:sub_part.B[11]
+IN2[12] => NAND_gate:nand_part.B[12]
+IN2[12] => XOR_gate:xor_part.B[12]
+IN2[12] => KS16bitAdder:add_part.B[12]
+IN2[12] => KS16bitAdder:sub_part.B[12]
+IN2[13] => NAND_gate:nand_part.B[13]
+IN2[13] => XOR_gate:xor_part.B[13]
+IN2[13] => KS16bitAdder:add_part.B[13]
+IN2[13] => KS16bitAdder:sub_part.B[13]
+IN2[14] => NAND_gate:nand_part.B[14]
+IN2[14] => XOR_gate:xor_part.B[14]
+IN2[14] => KS16bitAdder:add_part.B[14]
+IN2[14] => KS16bitAdder:sub_part.B[14]
+IN2[15] => NAND_gate:nand_part.B[15]
+IN2[15] => XOR_gate:xor_part.B[15]
+IN2[15] => KS16bitAdder:add_part.B[15]
+IN2[15] => KS16bitAdder:sub_part.B[15]
+S0 => Z.IN0
+S0 => Z.IN0
+S0 => Z.IN0
+S1 => Z.IN1
+S1 => Z.IN1
+S1 => Z.IN1
+Z[0] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[4] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[5] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[6] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[7] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[8] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[9] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[10] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[11] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[12] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[13] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[14] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[15] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+zero_bit <= zero_bit.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|XOR_gate|NOT_gate:invert_I0
-IN00 => OUT0.DATAIN
-OUT0 <= IN00.DB_MAX_OUTPUT_PORT_TYPE
+|ALU|NAND_gate:nand_part
+A[0] => Z.IN0
+A[1] => Z.IN0
+A[2] => Z.IN0
+A[3] => Z.IN0
+A[4] => Z.IN0
+A[5] => Z.IN0
+A[6] => Z.IN0
+A[7] => Z.IN0
+A[8] => Z.IN0
+A[9] => Z.IN0
+A[10] => Z.IN0
+A[11] => Z.IN0
+A[12] => Z.IN0
+A[13] => Z.IN0
+A[14] => Z.IN0
+A[15] => Z.IN0
+B[0] => Z.IN1
+B[1] => Z.IN1
+B[2] => Z.IN1
+B[3] => Z.IN1
+B[4] => Z.IN1
+B[5] => Z.IN1
+B[6] => Z.IN1
+B[7] => Z.IN1
+B[8] => Z.IN1
+B[9] => Z.IN1
+B[10] => Z.IN1
+B[11] => Z.IN1
+B[12] => Z.IN1
+B[13] => Z.IN1
+B[14] => Z.IN1
+B[15] => Z.IN1
+Z[0] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[4] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[5] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[6] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[7] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[8] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[9] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[10] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[11] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[12] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[13] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[14] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[15] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+zero_bit <= temp.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|XOR_gate|NOT_gate:invert_I1
-IN00 => OUT0.DATAIN
-OUT0 <= IN00.DB_MAX_OUTPUT_PORT_TYPE
+|ALU|XOR_gate:xor_part
+A[0] => Z.IN0
+A[1] => Z.IN0
+A[2] => Z.IN0
+A[3] => Z.IN0
+A[4] => Z.IN0
+A[5] => Z.IN0
+A[6] => Z.IN0
+A[7] => Z.IN0
+A[8] => Z.IN0
+A[9] => Z.IN0
+A[10] => Z.IN0
+A[11] => Z.IN0
+A[12] => Z.IN0
+A[13] => Z.IN0
+A[14] => Z.IN0
+A[15] => Z.IN0
+B[0] => Z.IN1
+B[1] => Z.IN1
+B[2] => Z.IN1
+B[3] => Z.IN1
+B[4] => Z.IN1
+B[5] => Z.IN1
+B[6] => Z.IN1
+B[7] => Z.IN1
+B[8] => Z.IN1
+B[9] => Z.IN1
+B[10] => Z.IN1
+B[11] => Z.IN1
+B[12] => Z.IN1
+B[13] => Z.IN1
+B[14] => Z.IN1
+B[15] => Z.IN1
+Z[0] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[4] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[5] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[6] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[7] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[8] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[9] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[10] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[11] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[12] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[13] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[14] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[15] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+zero_bit <= temp.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|XOR_gate|AND_gate:first_and
-IN10 => OUT1.IN0
-IN11 => OUT1.IN1
-OUT1 <= OUT1.DB_MAX_OUTPUT_PORT_TYPE
+|ALU|KS16bitAdder:add_part
+A[0] => XorG:XorGa:0:Xor_instance.x1in
+A[0] => AndGate:Gi:0:And_instance.x1
+A[1] => XorG:XorGa:1:Xor_instance.x1in
+A[1] => AndGate:Gi:1:And_instance.x1
+A[2] => XorG:XorGa:2:Xor_instance.x1in
+A[2] => AndGate:Gi:2:And_instance.x1
+A[3] => XorG:XorGa:3:Xor_instance.x1in
+A[3] => AndGate:Gi:3:And_instance.x1
+A[4] => XorG:XorGa:4:Xor_instance.x1in
+A[4] => AndGate:Gi:4:And_instance.x1
+A[5] => XorG:XorGa:5:Xor_instance.x1in
+A[5] => AndGate:Gi:5:And_instance.x1
+A[6] => XorG:XorGa:6:Xor_instance.x1in
+A[6] => AndGate:Gi:6:And_instance.x1
+A[7] => XorG:XorGa:7:Xor_instance.x1in
+A[7] => AndGate:Gi:7:And_instance.x1
+A[8] => XorG:XorGa:8:Xor_instance.x1in
+A[8] => AndGate:Gi:8:And_instance.x1
+A[9] => XorG:XorGa:9:Xor_instance.x1in
+A[9] => AndGate:Gi:9:And_instance.x1
+A[10] => XorG:XorGa:10:Xor_instance.x1in
+A[10] => AndGate:Gi:10:And_instance.x1
+A[11] => XorG:XorGa:11:Xor_instance.x1in
+A[11] => AndGate:Gi:11:And_instance.x1
+A[12] => XorG:XorGa:12:Xor_instance.x1in
+A[12] => AndGate:Gi:12:And_instance.x1
+A[13] => XorG:XorGa:13:Xor_instance.x1in
+A[13] => AndGate:Gi:13:And_instance.x1
+A[14] => XorG:XorGa:14:Xor_instance.x1in
+A[14] => AndGate:Gi:14:And_instance.x1
+A[15] => XorG:XorGa:15:Xor_instance.x1in
+A[15] => AndGate:Gi:15:And_instance.x1
+B[0] => XorG:XorGa:0:Xor_instance.x2in
+B[0] => AndGate:Gi:0:And_instance.x2
+B[1] => XorG:XorGa:1:Xor_instance.x2in
+B[1] => AndGate:Gi:1:And_instance.x2
+B[2] => XorG:XorGa:2:Xor_instance.x2in
+B[2] => AndGate:Gi:2:And_instance.x2
+B[3] => XorG:XorGa:3:Xor_instance.x2in
+B[3] => AndGate:Gi:3:And_instance.x2
+B[4] => XorG:XorGa:4:Xor_instance.x2in
+B[4] => AndGate:Gi:4:And_instance.x2
+B[5] => XorG:XorGa:5:Xor_instance.x2in
+B[5] => AndGate:Gi:5:And_instance.x2
+B[6] => XorG:XorGa:6:Xor_instance.x2in
+B[6] => AndGate:Gi:6:And_instance.x2
+B[7] => XorG:XorGa:7:Xor_instance.x2in
+B[7] => AndGate:Gi:7:And_instance.x2
+B[8] => XorG:XorGa:8:Xor_instance.x2in
+B[8] => AndGate:Gi:8:And_instance.x2
+B[9] => XorG:XorGa:9:Xor_instance.x2in
+B[9] => AndGate:Gi:9:And_instance.x2
+B[10] => XorG:XorGa:10:Xor_instance.x2in
+B[10] => AndGate:Gi:10:And_instance.x2
+B[11] => XorG:XorGa:11:Xor_instance.x2in
+B[11] => AndGate:Gi:11:And_instance.x2
+B[12] => XorG:XorGa:12:Xor_instance.x2in
+B[12] => AndGate:Gi:12:And_instance.x2
+B[13] => XorG:XorGa:13:Xor_instance.x2in
+B[13] => AndGate:Gi:13:And_instance.x2
+B[14] => XorG:XorGa:14:Xor_instance.x2in
+B[14] => AndGate:Gi:14:And_instance.x2
+B[15] => XorG:XorGa:15:Xor_instance.x2in
+B[15] => AndGate:Gi:15:And_instance.x2
+cin => AndGate:finalstg:1:AndS_ins.x2
+cin => XorG:finalstg:1:XorS_instance.x2in
+cin => AndGate:finalstg:2:AndS_ins.x2
+cin => AndGate:finalstg:3:AndS_ins.x2
+cin => AndGate:finalstg:4:AndS_ins.x2
+cin => AndGate:finalstg:5:AndS_ins.x2
+cin => AndGate:finalstg:6:AndS_ins.x2
+cin => AndGate:finalstg:7:AndS_ins.x2
+cin => AndGate:finalstg:8:AndS_ins.x2
+cin => AndGate:finalstg:9:AndS_ins.x2
+cin => AndGate:finalstg:10:AndS_ins.x2
+cin => AndGate:finalstg:11:AndS_ins.x2
+cin => AndGate:finalstg:12:AndS_ins.x2
+cin => AndGate:finalstg:13:AndS_ins.x2
+cin => AndGate:finalstg:14:AndS_ins.x2
+cin => AndGate:finalstg:15:AndS_ins.x2
+cin => AndGate:finalstg:16:AndS_ins.x2
+ans[0] <= XorG:finalstg:1:XorS_instance.yout
+ans[1] <= XorG:finalstg:2:XorS_instance.yout
+ans[2] <= XorG:finalstg:3:XorS_instance.yout
+ans[3] <= XorG:finalstg:4:XorS_instance.yout
+ans[4] <= XorG:finalstg:5:XorS_instance.yout
+ans[5] <= XorG:finalstg:6:XorS_instance.yout
+ans[6] <= XorG:finalstg:7:XorS_instance.yout
+ans[7] <= XorG:finalstg:8:XorS_instance.yout
+ans[8] <= XorG:finalstg:9:XorS_instance.yout
+ans[9] <= XorG:finalstg:10:XorS_instance.yout
+ans[10] <= XorG:finalstg:11:XorS_instance.yout
+ans[11] <= XorG:finalstg:12:XorS_instance.yout
+ans[12] <= XorG:finalstg:13:XorS_instance.yout
+ans[13] <= XorG:finalstg:14:XorS_instance.yout
+ans[14] <= XorG:finalstg:15:XorS_instance.yout
+ans[15] <= XorG:finalstg:16:XorS_instance.yout
+cout <= ORGate:finalstg:16:OrS_ins.y
+zero <= NotGate:Not_insta.y
 
 
-|XOR_gate|AND_gate:second_and
-IN10 => OUT1.IN0
-IN11 => OUT1.IN1
-OUT1 <= OUT1.DB_MAX_OUTPUT_PORT_TYPE
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:0:Xor_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
 
 
-|XOR_gate|OR_gate:final_or
-IN20 => OUT2.IN0
-IN21 => OUT2.IN1
-OUT2 <= OUT2.DB_MAX_OUTPUT_PORT_TYPE
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:0:Xor_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:0:Xor_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:0:Xor_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:0:Xor_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:0:Xor_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:1:Xor_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:1:Xor_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:1:Xor_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:1:Xor_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:1:Xor_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:1:Xor_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:2:Xor_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:2:Xor_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:2:Xor_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:2:Xor_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:2:Xor_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:2:Xor_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:3:Xor_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:3:Xor_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:3:Xor_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:3:Xor_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:3:Xor_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:3:Xor_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:4:Xor_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:4:Xor_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:4:Xor_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:4:Xor_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:4:Xor_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:4:Xor_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:5:Xor_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:5:Xor_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:5:Xor_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:5:Xor_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:5:Xor_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:5:Xor_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:6:Xor_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:6:Xor_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:6:Xor_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:6:Xor_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:6:Xor_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:6:Xor_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:7:Xor_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:7:Xor_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:7:Xor_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:7:Xor_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:7:Xor_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:7:Xor_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:8:Xor_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:8:Xor_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:8:Xor_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:8:Xor_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:8:Xor_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:8:Xor_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:9:Xor_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:9:Xor_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:9:Xor_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:9:Xor_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:9:Xor_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:9:Xor_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:10:Xor_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:10:Xor_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:10:Xor_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:10:Xor_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:10:Xor_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:10:Xor_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:11:Xor_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:11:Xor_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:11:Xor_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:11:Xor_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:11:Xor_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:11:Xor_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:12:Xor_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:12:Xor_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:12:Xor_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:12:Xor_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:12:Xor_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:12:Xor_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:13:Xor_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:13:Xor_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:13:Xor_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:13:Xor_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:13:Xor_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:13:Xor_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:14:Xor_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:14:Xor_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:14:Xor_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:14:Xor_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:14:Xor_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:14:Xor_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:15:Xor_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:15:Xor_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:15:Xor_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:15:Xor_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:15:Xor_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\XorGa:15:Xor_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ANDGAte:\Gi:0:And_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ANDGAte:\Gi:1:And_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ANDGAte:\Gi:2:And_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ANDGAte:\Gi:3:And_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ANDGAte:\Gi:4:And_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ANDGAte:\Gi:5:And_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ANDGAte:\Gi:6:And_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ANDGAte:\Gi:7:And_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ANDGAte:\Gi:8:And_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ANDGAte:\Gi:9:And_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ANDGAte:\Gi:10:And_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ANDGAte:\Gi:11:And_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ANDGAte:\Gi:12:And_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ANDGAte:\Gi:13:And_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ANDGAte:\Gi:14:And_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ANDGAte:\Gi:15:And_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:0:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:0:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:0:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:0:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:1:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:1:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:1:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:1:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:2:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:2:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:2:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:2:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:3:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:3:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:3:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:3:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:4:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:4:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:4:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:4:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:5:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:5:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:5:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:5:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:6:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:6:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:6:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:6:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:7:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:7:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:7:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:7:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:8:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:8:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:8:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:8:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:9:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:9:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:9:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:9:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:10:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:10:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:10:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:10:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:11:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:11:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:11:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:11:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:12:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:12:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:12:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:12:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:13:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:13:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:13:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:13:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:14:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:14:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:14:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg1:14:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:0:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:0:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:0:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:0:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:1:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:1:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:1:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:1:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:2:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:2:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:2:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:2:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:3:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:3:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:3:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:3:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:4:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:4:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:4:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:4:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:5:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:5:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:5:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:5:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:6:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:6:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:6:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:6:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:7:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:7:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:7:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:7:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:8:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:8:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:8:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:8:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:9:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:9:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:9:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:9:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:10:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:10:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:10:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:10:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:11:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:11:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:11:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:11:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:12:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:12:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:12:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:12:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:13:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:13:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:13:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg2:13:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:0:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:0:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:0:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:0:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:1:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:1:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:1:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:1:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:2:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:2:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:2:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:2:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:3:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:3:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:3:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:3:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:4:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:4:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:4:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:4:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:5:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:5:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:5:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:5:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:6:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:6:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:6:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:6:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:7:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:7:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:7:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:7:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:8:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:8:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:8:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:8:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:9:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:9:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:9:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:9:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:10:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:10:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:10:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:10:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:11:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:11:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:11:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg32:11:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg42:0:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg42:0:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg42:0:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg42:0:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg42:1:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg42:1:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg42:1:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg42:1:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg42:2:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg42:2:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg42:2:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg42:2:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg42:3:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg42:3:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg42:3:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg42:3:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg42:4:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg42:4:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg42:4:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg42:4:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg42:5:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg42:5:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg42:5:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg42:5:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg42:6:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg42:6:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg42:6:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg42:6:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg42:7:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg42:7:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg42:7:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|grpop:\stg42:7:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ANDGAte:\finalstg:1:AndS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ORGate:\finalstg:1:OrS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:1:XorS_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:1:XorS_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:1:XorS_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:1:XorS_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:1:XorS_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:1:XorS_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ANDGAte:\finalstg:2:AndS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ORGate:\finalstg:2:OrS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:2:XorS_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:2:XorS_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:2:XorS_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:2:XorS_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:2:XorS_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:2:XorS_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ANDGAte:\finalstg:3:AndS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ORGate:\finalstg:3:OrS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:3:XorS_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:3:XorS_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:3:XorS_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:3:XorS_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:3:XorS_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:3:XorS_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ANDGAte:\finalstg:4:AndS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ORGate:\finalstg:4:OrS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:4:XorS_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:4:XorS_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:4:XorS_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:4:XorS_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:4:XorS_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:4:XorS_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ANDGAte:\finalstg:5:AndS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ORGate:\finalstg:5:OrS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:5:XorS_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:5:XorS_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:5:XorS_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:5:XorS_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:5:XorS_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:5:XorS_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ANDGAte:\finalstg:6:AndS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ORGate:\finalstg:6:OrS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:6:XorS_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:6:XorS_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:6:XorS_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:6:XorS_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:6:XorS_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:6:XorS_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ANDGAte:\finalstg:7:AndS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ORGate:\finalstg:7:OrS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:7:XorS_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:7:XorS_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:7:XorS_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:7:XorS_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:7:XorS_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:7:XorS_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ANDGAte:\finalstg:8:AndS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ORGate:\finalstg:8:OrS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:8:XorS_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:8:XorS_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:8:XorS_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:8:XorS_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:8:XorS_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:8:XorS_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ANDGAte:\finalstg:9:AndS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ORGate:\finalstg:9:OrS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:9:XorS_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:9:XorS_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:9:XorS_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:9:XorS_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:9:XorS_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:9:XorS_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ANDGAte:\finalstg:10:AndS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ORGate:\finalstg:10:OrS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:10:XorS_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:10:XorS_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:10:XorS_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:10:XorS_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:10:XorS_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:10:XorS_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ANDGAte:\finalstg:11:AndS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ORGate:\finalstg:11:OrS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:11:XorS_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:11:XorS_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:11:XorS_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:11:XorS_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:11:XorS_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:11:XorS_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ANDGAte:\finalstg:12:AndS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ORGate:\finalstg:12:OrS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:12:XorS_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:12:XorS_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:12:XorS_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:12:XorS_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:12:XorS_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:12:XorS_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ANDGAte:\finalstg:13:AndS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ORGate:\finalstg:13:OrS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:13:XorS_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:13:XorS_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:13:XorS_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:13:XorS_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:13:XorS_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:13:XorS_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ANDGAte:\finalstg:14:AndS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ORGate:\finalstg:14:OrS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:14:XorS_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:14:XorS_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:14:XorS_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:14:XorS_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:14:XorS_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:14:XorS_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ANDGAte:\finalstg:15:AndS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ORGate:\finalstg:15:OrS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:15:XorS_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:15:XorS_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:15:XorS_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:15:XorS_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:15:XorS_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:15:XorS_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ANDGAte:\finalstg:16:AndS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ORGate:\finalstg:16:OrS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:16:XorS_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:16:XorS_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:16:XorS_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:16:XorS_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:16:XorS_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|XorG:\finalstg:16:XorS_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ORGate:Orz0_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ORGate:\zlogic:1:Orz0_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ORGate:\zlogic:2:Orz0_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ORGate:\zlogic:3:Orz0_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ORGate:\zlogic:4:Orz0_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ORGate:\zlogic:5:Orz0_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ORGate:\zlogic:6:Orz0_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ORGate:\zlogic:7:Orz0_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ORGate:\zlogic:8:Orz0_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ORGate:\zlogic:9:Orz0_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ORGate:\zlogic:10:Orz0_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ORGate:\zlogic:11:Orz0_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ORGate:\zlogic:12:Orz0_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ORGate:\zlogic:13:Orz0_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ORGate:\zlogic:14:Orz0_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|ORGate:\zlogic:15:Orz0_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:add_part|NotGate:Not_insta
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part
+A[0] => XorG:XorGa:0:Xor_instance.x1in
+A[0] => AndGate:Gi:0:And_instance.x1
+A[1] => XorG:XorGa:1:Xor_instance.x1in
+A[1] => AndGate:Gi:1:And_instance.x1
+A[2] => XorG:XorGa:2:Xor_instance.x1in
+A[2] => AndGate:Gi:2:And_instance.x1
+A[3] => XorG:XorGa:3:Xor_instance.x1in
+A[3] => AndGate:Gi:3:And_instance.x1
+A[4] => XorG:XorGa:4:Xor_instance.x1in
+A[4] => AndGate:Gi:4:And_instance.x1
+A[5] => XorG:XorGa:5:Xor_instance.x1in
+A[5] => AndGate:Gi:5:And_instance.x1
+A[6] => XorG:XorGa:6:Xor_instance.x1in
+A[6] => AndGate:Gi:6:And_instance.x1
+A[7] => XorG:XorGa:7:Xor_instance.x1in
+A[7] => AndGate:Gi:7:And_instance.x1
+A[8] => XorG:XorGa:8:Xor_instance.x1in
+A[8] => AndGate:Gi:8:And_instance.x1
+A[9] => XorG:XorGa:9:Xor_instance.x1in
+A[9] => AndGate:Gi:9:And_instance.x1
+A[10] => XorG:XorGa:10:Xor_instance.x1in
+A[10] => AndGate:Gi:10:And_instance.x1
+A[11] => XorG:XorGa:11:Xor_instance.x1in
+A[11] => AndGate:Gi:11:And_instance.x1
+A[12] => XorG:XorGa:12:Xor_instance.x1in
+A[12] => AndGate:Gi:12:And_instance.x1
+A[13] => XorG:XorGa:13:Xor_instance.x1in
+A[13] => AndGate:Gi:13:And_instance.x1
+A[14] => XorG:XorGa:14:Xor_instance.x1in
+A[14] => AndGate:Gi:14:And_instance.x1
+A[15] => XorG:XorGa:15:Xor_instance.x1in
+A[15] => AndGate:Gi:15:And_instance.x1
+B[0] => XorG:XorGa:0:Xor_instance.x2in
+B[0] => AndGate:Gi:0:And_instance.x2
+B[1] => XorG:XorGa:1:Xor_instance.x2in
+B[1] => AndGate:Gi:1:And_instance.x2
+B[2] => XorG:XorGa:2:Xor_instance.x2in
+B[2] => AndGate:Gi:2:And_instance.x2
+B[3] => XorG:XorGa:3:Xor_instance.x2in
+B[3] => AndGate:Gi:3:And_instance.x2
+B[4] => XorG:XorGa:4:Xor_instance.x2in
+B[4] => AndGate:Gi:4:And_instance.x2
+B[5] => XorG:XorGa:5:Xor_instance.x2in
+B[5] => AndGate:Gi:5:And_instance.x2
+B[6] => XorG:XorGa:6:Xor_instance.x2in
+B[6] => AndGate:Gi:6:And_instance.x2
+B[7] => XorG:XorGa:7:Xor_instance.x2in
+B[7] => AndGate:Gi:7:And_instance.x2
+B[8] => XorG:XorGa:8:Xor_instance.x2in
+B[8] => AndGate:Gi:8:And_instance.x2
+B[9] => XorG:XorGa:9:Xor_instance.x2in
+B[9] => AndGate:Gi:9:And_instance.x2
+B[10] => XorG:XorGa:10:Xor_instance.x2in
+B[10] => AndGate:Gi:10:And_instance.x2
+B[11] => XorG:XorGa:11:Xor_instance.x2in
+B[11] => AndGate:Gi:11:And_instance.x2
+B[12] => XorG:XorGa:12:Xor_instance.x2in
+B[12] => AndGate:Gi:12:And_instance.x2
+B[13] => XorG:XorGa:13:Xor_instance.x2in
+B[13] => AndGate:Gi:13:And_instance.x2
+B[14] => XorG:XorGa:14:Xor_instance.x2in
+B[14] => AndGate:Gi:14:And_instance.x2
+B[15] => XorG:XorGa:15:Xor_instance.x2in
+B[15] => AndGate:Gi:15:And_instance.x2
+cin => AndGate:finalstg:1:AndS_ins.x2
+cin => XorG:finalstg:1:XorS_instance.x2in
+cin => AndGate:finalstg:2:AndS_ins.x2
+cin => AndGate:finalstg:3:AndS_ins.x2
+cin => AndGate:finalstg:4:AndS_ins.x2
+cin => AndGate:finalstg:5:AndS_ins.x2
+cin => AndGate:finalstg:6:AndS_ins.x2
+cin => AndGate:finalstg:7:AndS_ins.x2
+cin => AndGate:finalstg:8:AndS_ins.x2
+cin => AndGate:finalstg:9:AndS_ins.x2
+cin => AndGate:finalstg:10:AndS_ins.x2
+cin => AndGate:finalstg:11:AndS_ins.x2
+cin => AndGate:finalstg:12:AndS_ins.x2
+cin => AndGate:finalstg:13:AndS_ins.x2
+cin => AndGate:finalstg:14:AndS_ins.x2
+cin => AndGate:finalstg:15:AndS_ins.x2
+cin => AndGate:finalstg:16:AndS_ins.x2
+ans[0] <= XorG:finalstg:1:XorS_instance.yout
+ans[1] <= XorG:finalstg:2:XorS_instance.yout
+ans[2] <= XorG:finalstg:3:XorS_instance.yout
+ans[3] <= XorG:finalstg:4:XorS_instance.yout
+ans[4] <= XorG:finalstg:5:XorS_instance.yout
+ans[5] <= XorG:finalstg:6:XorS_instance.yout
+ans[6] <= XorG:finalstg:7:XorS_instance.yout
+ans[7] <= XorG:finalstg:8:XorS_instance.yout
+ans[8] <= XorG:finalstg:9:XorS_instance.yout
+ans[9] <= XorG:finalstg:10:XorS_instance.yout
+ans[10] <= XorG:finalstg:11:XorS_instance.yout
+ans[11] <= XorG:finalstg:12:XorS_instance.yout
+ans[12] <= XorG:finalstg:13:XorS_instance.yout
+ans[13] <= XorG:finalstg:14:XorS_instance.yout
+ans[14] <= XorG:finalstg:15:XorS_instance.yout
+ans[15] <= XorG:finalstg:16:XorS_instance.yout
+cout <= ORGate:finalstg:16:OrS_ins.y
+zero <= NotGate:Not_insta.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:0:Xor_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:0:Xor_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:0:Xor_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:0:Xor_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:0:Xor_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:0:Xor_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:1:Xor_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:1:Xor_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:1:Xor_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:1:Xor_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:1:Xor_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:1:Xor_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:2:Xor_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:2:Xor_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:2:Xor_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:2:Xor_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:2:Xor_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:2:Xor_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:3:Xor_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:3:Xor_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:3:Xor_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:3:Xor_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:3:Xor_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:3:Xor_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:4:Xor_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:4:Xor_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:4:Xor_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:4:Xor_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:4:Xor_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:4:Xor_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:5:Xor_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:5:Xor_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:5:Xor_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:5:Xor_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:5:Xor_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:5:Xor_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:6:Xor_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:6:Xor_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:6:Xor_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:6:Xor_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:6:Xor_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:6:Xor_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:7:Xor_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:7:Xor_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:7:Xor_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:7:Xor_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:7:Xor_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:7:Xor_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:8:Xor_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:8:Xor_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:8:Xor_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:8:Xor_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:8:Xor_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:8:Xor_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:9:Xor_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:9:Xor_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:9:Xor_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:9:Xor_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:9:Xor_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:9:Xor_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:10:Xor_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:10:Xor_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:10:Xor_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:10:Xor_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:10:Xor_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:10:Xor_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:11:Xor_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:11:Xor_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:11:Xor_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:11:Xor_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:11:Xor_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:11:Xor_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:12:Xor_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:12:Xor_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:12:Xor_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:12:Xor_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:12:Xor_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:12:Xor_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:13:Xor_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:13:Xor_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:13:Xor_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:13:Xor_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:13:Xor_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:13:Xor_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:14:Xor_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:14:Xor_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:14:Xor_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:14:Xor_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:14:Xor_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:14:Xor_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:15:Xor_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:15:Xor_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:15:Xor_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:15:Xor_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:15:Xor_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\XorGa:15:Xor_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ANDGAte:\Gi:0:And_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ANDGAte:\Gi:1:And_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ANDGAte:\Gi:2:And_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ANDGAte:\Gi:3:And_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ANDGAte:\Gi:4:And_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ANDGAte:\Gi:5:And_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ANDGAte:\Gi:6:And_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ANDGAte:\Gi:7:And_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ANDGAte:\Gi:8:And_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ANDGAte:\Gi:9:And_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ANDGAte:\Gi:10:And_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ANDGAte:\Gi:11:And_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ANDGAte:\Gi:12:And_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ANDGAte:\Gi:13:And_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ANDGAte:\Gi:14:And_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ANDGAte:\Gi:15:And_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:0:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:0:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:0:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:0:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:1:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:1:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:1:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:1:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:2:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:2:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:2:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:2:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:3:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:3:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:3:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:3:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:4:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:4:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:4:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:4:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:5:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:5:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:5:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:5:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:6:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:6:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:6:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:6:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:7:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:7:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:7:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:7:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:8:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:8:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:8:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:8:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:9:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:9:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:9:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:9:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:10:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:10:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:10:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:10:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:11:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:11:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:11:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:11:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:12:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:12:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:12:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:12:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:13:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:13:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:13:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:13:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:14:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:14:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:14:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg1:14:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:0:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:0:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:0:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:0:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:1:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:1:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:1:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:1:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:2:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:2:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:2:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:2:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:3:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:3:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:3:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:3:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:4:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:4:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:4:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:4:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:5:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:5:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:5:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:5:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:6:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:6:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:6:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:6:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:7:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:7:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:7:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:7:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:8:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:8:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:8:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:8:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:9:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:9:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:9:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:9:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:10:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:10:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:10:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:10:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:11:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:11:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:11:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:11:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:12:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:12:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:12:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:12:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:13:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:13:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:13:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg2:13:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:0:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:0:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:0:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:0:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:1:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:1:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:1:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:1:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:2:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:2:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:2:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:2:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:3:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:3:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:3:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:3:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:4:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:4:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:4:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:4:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:5:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:5:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:5:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:5:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:6:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:6:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:6:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:6:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:7:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:7:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:7:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:7:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:8:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:8:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:8:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:8:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:9:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:9:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:9:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:9:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:10:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:10:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:10:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:10:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:11:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:11:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:11:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg32:11:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg42:0:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg42:0:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg42:0:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg42:0:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg42:1:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg42:1:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg42:1:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg42:1:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg42:2:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg42:2:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg42:2:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg42:2:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg42:3:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg42:3:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg42:3:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg42:3:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg42:4:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg42:4:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg42:4:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg42:4:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg42:5:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg42:5:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg42:5:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg42:5:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg42:6:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg42:6:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg42:6:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg42:6:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg42:7:prefixcomp
+gi => ORGate:Orga.x1
+pi => ANDGate:And0_instance.x2
+pi => ANDGate:Andgat.x1
+gj => ANDGate:And0_instance.x1
+pj => ANDGate:Andgat.x2
+gk <= ORGate:Orga.y
+pk <= ANDGate:Andgat.y
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg42:7:prefixcomp|ANDGAte:And0_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg42:7:prefixcomp|ORGate:Orga
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|grpop:\stg42:7:prefixcomp|ANDGAte:Andgat
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ANDGAte:\finalstg:1:AndS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ORGate:\finalstg:1:OrS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:1:XorS_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:1:XorS_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:1:XorS_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:1:XorS_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:1:XorS_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:1:XorS_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ANDGAte:\finalstg:2:AndS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ORGate:\finalstg:2:OrS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:2:XorS_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:2:XorS_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:2:XorS_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:2:XorS_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:2:XorS_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:2:XorS_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ANDGAte:\finalstg:3:AndS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ORGate:\finalstg:3:OrS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:3:XorS_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:3:XorS_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:3:XorS_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:3:XorS_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:3:XorS_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:3:XorS_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ANDGAte:\finalstg:4:AndS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ORGate:\finalstg:4:OrS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:4:XorS_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:4:XorS_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:4:XorS_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:4:XorS_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:4:XorS_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:4:XorS_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ANDGAte:\finalstg:5:AndS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ORGate:\finalstg:5:OrS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:5:XorS_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:5:XorS_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:5:XorS_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:5:XorS_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:5:XorS_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:5:XorS_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ANDGAte:\finalstg:6:AndS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ORGate:\finalstg:6:OrS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:6:XorS_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:6:XorS_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:6:XorS_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:6:XorS_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:6:XorS_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:6:XorS_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ANDGAte:\finalstg:7:AndS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ORGate:\finalstg:7:OrS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:7:XorS_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:7:XorS_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:7:XorS_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:7:XorS_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:7:XorS_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:7:XorS_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ANDGAte:\finalstg:8:AndS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ORGate:\finalstg:8:OrS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:8:XorS_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:8:XorS_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:8:XorS_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:8:XorS_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:8:XorS_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:8:XorS_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ANDGAte:\finalstg:9:AndS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ORGate:\finalstg:9:OrS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:9:XorS_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:9:XorS_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:9:XorS_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:9:XorS_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:9:XorS_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:9:XorS_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ANDGAte:\finalstg:10:AndS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ORGate:\finalstg:10:OrS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:10:XorS_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:10:XorS_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:10:XorS_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:10:XorS_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:10:XorS_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:10:XorS_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ANDGAte:\finalstg:11:AndS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ORGate:\finalstg:11:OrS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:11:XorS_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:11:XorS_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:11:XorS_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:11:XorS_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:11:XorS_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:11:XorS_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ANDGAte:\finalstg:12:AndS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ORGate:\finalstg:12:OrS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:12:XorS_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:12:XorS_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:12:XorS_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:12:XorS_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:12:XorS_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:12:XorS_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ANDGAte:\finalstg:13:AndS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ORGate:\finalstg:13:OrS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:13:XorS_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:13:XorS_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:13:XorS_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:13:XorS_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:13:XorS_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:13:XorS_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ANDGAte:\finalstg:14:AndS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ORGate:\finalstg:14:OrS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:14:XorS_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:14:XorS_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:14:XorS_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:14:XorS_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:14:XorS_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:14:XorS_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ANDGAte:\finalstg:15:AndS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ORGate:\finalstg:15:OrS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:15:XorS_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:15:XorS_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:15:XorS_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:15:XorS_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:15:XorS_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:15:XorS_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ANDGAte:\finalstg:16:AndS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ORGate:\finalstg:16:OrS_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:16:XorS_instance
+x1in => NotGate:Not1_instance.x
+x1in => ANDGate:AND1_instance.x1
+x2in => NotGate:Not2_instance.x
+x2in => ANDGate:AND2_instance.x1
+yout <= ORGate:OR_instance.y
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:16:XorS_instance|NotGate:Not1_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:16:XorS_instance|NotGate:Not2_instance
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:16:XorS_instance|ANDGAte:AND1_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:16:XorS_instance|ANDGAte:AND2_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|XorG:\finalstg:16:XorS_instance|ORGate:OR_instance
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ORGate:Orz0_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ORGate:\zlogic:1:Orz0_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ORGate:\zlogic:2:Orz0_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ORGate:\zlogic:3:Orz0_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ORGate:\zlogic:4:Orz0_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ORGate:\zlogic:5:Orz0_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ORGate:\zlogic:6:Orz0_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ORGate:\zlogic:7:Orz0_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ORGate:\zlogic:8:Orz0_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ORGate:\zlogic:9:Orz0_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ORGate:\zlogic:10:Orz0_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ORGate:\zlogic:11:Orz0_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ORGate:\zlogic:12:Orz0_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ORGate:\zlogic:13:Orz0_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ORGate:\zlogic:14:Orz0_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|ORGate:\zlogic:15:Orz0_ins
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KS16bitAdder:sub_part|NotGate:Not_insta
+x => y.DATAIN
+y <= x.DB_MAX_OUTPUT_PORT_TYPE
 
 

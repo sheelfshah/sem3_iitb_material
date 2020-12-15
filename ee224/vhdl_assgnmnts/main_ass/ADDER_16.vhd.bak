@@ -1,0 +1,18 @@
+--added buffer blocks for better rtl view
+--instead of A and B(to be added), KS16bit takes in G = A and B and P = A xor B as inputs
+
+entity ADDER_16 is
+
+	port (A, B : in bit_vector(15 downto 0);
+			Cin : in bit;
+			SUM : out bit_vector(15 downto 0));
+			
+end entity ADDER_16;
+
+--code here
+
+
+architecture behaviour_adder of ADDER_16 is
+	--code here
+end behaviour_adder;
+

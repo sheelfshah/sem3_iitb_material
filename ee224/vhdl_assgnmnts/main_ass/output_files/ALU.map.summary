@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Mon Nov 30 20:32:16 2020
+Analysis & Synthesis Status : Successful - Thu Dec 03 21:22:48 2020
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : ALU
-Top-level Entity Name : XOR_gate
+Top-level Entity Name : ALU
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 0
-Total pins : 3
+Total pins : 52
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

@@ -1,0 +1,37 @@
+entity Testbenchksadder is
+end Testbenchksadder;
+ 
+ architecture testb_bhv of Testbenchksadder is
+   signal At,Bt,anst: bit_vector(0 to 15);
+	
+	
+   component NandOp is 
+  port(A: in  bit_vector(0 to 15);
+       B: in bit_vector(0 to 15);
+		 ans:out bit_vector(0 to 15));
+	 end component;
+	 
+	 begin 
+	   
+		comp: NandOp
+		  port map( A => At, B => Bt, ans => anst);
+		  
+	  process
+	   begin
+		  At <= "0000000000000000";
+		  Bt <= "0000000000000000";
+		  wait for 5 ns;
+		  
+		  At <= "1000000000000000";
+		  Bt <= "1111111111111111";
+		  wait for 5 ns;
+		  
+		  At <= "1000100000111101";
+		  Bt <= "0100001001101001";
+		  wait for 5 ns;
+		  
+		  At <= "0110111011110010";
+		  Bt <= "1011000000010000";
+		  wait for 5 ns;
+	  end process;
+ end testb_bhv;
